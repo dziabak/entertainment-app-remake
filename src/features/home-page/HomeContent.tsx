@@ -49,11 +49,13 @@ const HomeContent = () => {
 	}
 
 	return (
-		<>
+		<section className="px-6">
 			<div>HomeContent</div>
 			<Searchbar onSearch={getSearchValue} />
-			{content}
-		</>
+			<div className="grid grid-cols-2 gap-6 mt-6 md:grid-cols-3 lg:grid-cols-4">
+				{content}
+			</div>
+		</section>
 	);
 };
 

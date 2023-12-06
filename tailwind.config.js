@@ -2,7 +2,16 @@
 export default {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
-		extend: {},
+		fontFamily: { main: ["Outfit", "sans-serif"] },
+		extend: {
+			colors: {
+				"c-white": "#FFFFFF",
+				"c-black": "#10141E",
+				"c-dark-blue": "#161D2F",
+				"c-light-blue": "#5A698F",
+				"c-red": "#FC4747",
+			},
+		},
 	},
 	plugins: [],
 };

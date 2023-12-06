@@ -1,7 +1,12 @@
-const Home = () => {
-  return (
-    <div>Home</div>
-  )
-}
+// EXTERNAL IMPORTS
 
-export default Home
+//INTERNAL IMPORT
+// import { fetchAllContentData } from "../services/api/http";
+
+const Home = () => {
+	// fetchAllContentData();
+
+	return <div>Home</div>;
+};
+
+export default Home;

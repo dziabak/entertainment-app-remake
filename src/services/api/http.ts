@@ -1,11 +1,11 @@
 // EXTERNAL IMPORTS
 import { QueryClient } from "@tanstack/react-query";
 // INTERNAL IMPORTS
-import { ContentData } from "../../types/types";
+import { MediaContentData } from "../../types/types";
 
 export const queryClient = new QueryClient();
 
-export const fetchAllContentData = async () => {
+export const fetchAllMediaContentData = async () => {
 	const response = await fetch("../data.json");
 
 	if (!response.ok) {
@@ -13,8 +13,7 @@ export const fetchAllContentData = async () => {
 		throw error;
 	}
 
-	const allContentData: ContentData = await response.json();
+	const allMediaContentData: MediaContentData = await response.json();
 
-	console.log(allContentData);
-	return allContentData;
+	return allMediaContentData;
 };

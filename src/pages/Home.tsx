@@ -1,12 +1,13 @@
-// EXTERNAL IMPORTS
-
-//INTERNAL IMPORT
-// import { fetchAllContentData } from "../services/api/http";
+//INTERNAL IMPORTS
+import HomeContent from "../features/home-page/HomeContent";
 
 const Home = () => {
-	// fetchAllContentData();
-
-	return <div>Home</div>;
+	return (
+		<>
+			<div>Home</div>
+			<HomeContent />
+		</>
+	);
 };
 
 export default Home;

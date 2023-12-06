@@ -1,4 +1,4 @@
-export type ContentData = {
+export type MediaContentData = {
 	title: string;
 	thumbnail: {
 		trending?: { small: string; large: string };
@@ -10,3 +10,5 @@ export type ContentData = {
 	isBookmarked: boolean;
 	isTrending: boolean;
 }[];
+
+export type MediaContentTileProps = MediaContentData[number];

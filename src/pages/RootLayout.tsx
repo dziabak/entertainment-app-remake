@@ -1,5 +1,4 @@
 // BUILT-IN IMPORTS
-import React from "react";
 import { Outlet } from "react-router-dom";
 
 type RootLayoutProps = {

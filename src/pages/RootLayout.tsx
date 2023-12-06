@@ -1,5 +1,7 @@
 // BUILT-IN IMPORTS
 import { Outlet } from "react-router-dom";
+// INTERNAL IMPORTS
+import Navigation from "../components/ui/Navigation";
 
 type RootLayoutProps = {
 	children?: React.ReactNode;
@@ -7,11 +9,11 @@ type RootLayoutProps = {
 
 const RootLayout = ({ children }: RootLayoutProps) => {
 	return (
-		<>
-			<div>RootLayout</div>
+		<main className="min-h-screen bg-c-black">
+			<Navigation />
 			<Outlet />
 			{children}
-		</>
+		</main>
 	);
 };
 

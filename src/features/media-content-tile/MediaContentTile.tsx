@@ -14,13 +14,12 @@ const MediaContentTile = ({
 		<div>
 			<p>MediaContentTile</p>
 			<img src={thumbnail.regular.small} alt="" />
-			<p>{thumbnail.regular.small}</p>
 			<p>{title}</p>
 			<p>{year}</p>
 			<p>{category}</p>
 			<p>{rating}</p>
-			<p>{isBookmarked}</p>
-			<p>{isTrending}</p>
+			{isBookmarked && <p>isBookmarked</p>}
+			{isTrending && <p>isTrending</p>}
 		</div>
 	);
 };

@@ -1,7 +1,12 @@
-const Movies = () => {
-  return (
-    <div>Movies</div>
-  )
-}
+// import HomeContent from "../features/home-page/HomeContent";
 
-export default Movies
+const Movies = () => {
+	return (
+		<>
+			<div>Movies</div>
+			{/* <HomeContent /> */}
+		</>
+	);
+};
+
+export default Movies;

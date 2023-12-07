@@ -9,7 +9,7 @@ const MediaContentTile = ({
 	category,
 	rating,
 	isBookmarked,
-	isTrending,
+	// isTrending,
 }: MediaContentTileProps) => {
 	return (
 		// w-[164px] h-[154px]
@@ -23,7 +23,7 @@ const MediaContentTile = ({
 			/>
 			<div className="font-thin font-main text-c-light-blue">
 				{isBookmarked && <p>isBookmarked</p>}
-				{isTrending && <p>isTrending</p>}
+				{/* {isTrending && <p>isTrending</p>} */}
 			</div>
 		</div>
 	);

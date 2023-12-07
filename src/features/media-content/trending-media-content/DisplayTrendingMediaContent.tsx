@@ -35,7 +35,7 @@ const DisplayTrendingMediaContent = () => {
 		));
 	}
 
-	return <div className="grid grid-cols-5 gap-4">{content}</div>;
+	return <div className="grid grid-cols-5 gap-64 mt-0 mb-6">{content}</div>;
 };
 
 export default DisplayTrendingMediaContent;

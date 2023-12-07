@@ -11,9 +11,13 @@ import DisplayTrendingMediaContent from "../trending-media-content/DisplayTrendi
 
 type DisplayMediaContentProps = {
 	queryFunction: () => Promise<MediaContentData>;
+	title: string;
 };
 
-const DisplayMediaContent = ({ queryFunction }: DisplayMediaContentProps) => {
+const DisplayMediaContent = ({
+	queryFunction,
+	title,
+}: DisplayMediaContentProps) => {
 	const [query, setQuery] = useState("");
 	const location = useLocation();
 
@@ -22,8 +26,9 @@ const DisplayMediaContent = ({ queryFunction }: DisplayMediaContentProps) => {
 	};
 
 	let content!: JSX.Element | JSX.Element[];
+	let filteredData: MediaContentData;
 
-	const { data, isFetching, isError } = useQuery({
+	const { data, isFetching, isError, isSuccess } = useQuery({
 		queryKey: ["mediaContent"],
 		queryFn: queryFunction,
 	});
@@ -37,7 +42,7 @@ const DisplayMediaContent = ({ queryFunction }: DisplayMediaContentProps) => {
 	}
 
 	if (data) {
-		const filteredData = data.filter((item) => {
+		filteredData = data.filter((item) => {
 			return item.title.toLowerCase().includes(query.toLowerCase());
 		});
 
@@ -57,13 +62,24 @@ const DisplayMediaContent = ({ queryFunction }: DisplayMediaContentProps) => {
 
 	return (
 		<section className="px-6">
-			<div>HomeContent</div>
-			<Searchbar onSearch={getSearchValue} />
-			{location.pathname === "/home" ? (
+			{isSuccess && <Searchbar onSearch={getSearchValue} />}
+			{location.pathname === "/home" && isSuccess && query === "" ? (
 				<DisplayTrendingMediaContent />
 			) : undefined}
-			<div className="grid grid-cols-2 gap-6 mt-6 md:grid-cols-3 lg:grid-cols-4">
-				{content}
+			<div className="my-2 space-y-6">
+				{query === "" && (
+					<p className="text-xl font-thin tracking-tight font-main text-c-white">
+						{title}
+					</p>
+				)}
+				{query !== "" && (
+					<p className="text-xl font-thin tracking-tight font-main text-c-white">
+						Found {filteredData!.length} results for "{query}"
+					</p>
+				)}
+				<div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
+					{content}
+				</div>
 			</div>
 		</section>
 	);

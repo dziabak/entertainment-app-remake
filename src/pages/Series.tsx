@@ -5,8 +5,7 @@ import DisplayMediaContent from "../features/media-content/main-media-content/Di
 const Series = () => {
 	return (
 		<>
-			<div>Series</div>
-			<DisplayMediaContent queryFunction={fetchSeriesContentData} />
+			<DisplayMediaContent title="TV Series" queryFunction={fetchSeriesContentData} />
 		</>
 	);
 };

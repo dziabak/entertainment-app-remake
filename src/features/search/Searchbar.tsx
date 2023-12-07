@@ -15,7 +15,7 @@ const Searchbar = ({
 	};
 
 	return (
-		<div className="flex flex-row items-center p-2 bg-c-black">
+		<div className="flex flex-row items-center p-2 mt-2 mb-6 bg-c-black">
 			<img src="../../assets/icon-search.svg" alt="" className="mr-2" />
 			<input
 				value={searchValue}

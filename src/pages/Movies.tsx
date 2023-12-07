@@ -5,8 +5,10 @@ import DisplayMediaContent from "../features/media-content/main-media-content/Di
 const Movies = () => {
 	return (
 		<>
-			<div>Movies</div>
-			<DisplayMediaContent queryFunction={fetchMoviesContentData} />
+			<DisplayMediaContent
+				title="Movies"
+				queryFunction={fetchMoviesContentData}
+			/>
 		</>
 	);
 };

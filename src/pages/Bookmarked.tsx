@@ -5,8 +5,7 @@ import DisplayMediaContent from "../features/media-content/main-media-content/Di
 const Bookmarked = () => {
 	return (
 		<>
-			<div>Bookmarked</div>
-			<DisplayMediaContent queryFunction={fetchBookmarkedContentData} />
+			<DisplayMediaContent title="Bookmarked" queryFunction={fetchBookmarkedContentData} />
 		</>
 	);
 };

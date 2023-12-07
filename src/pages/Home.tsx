@@ -6,9 +6,11 @@ import { fetchAllMediaContentData } from "../services/api/http";
 const Home = () => {
 	return (
 		<>
-			<div>Home</div>
 			<Outlet />
-			<DisplayMediaContent queryFunction={fetchAllMediaContentData} />
+			<DisplayMediaContent
+				title="Recommended for you"
+				queryFunction={fetchAllMediaContentData}
+			/>
 		</>
 	);
 };

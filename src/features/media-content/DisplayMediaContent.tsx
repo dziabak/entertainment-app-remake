@@ -3,11 +3,15 @@ import { useState } from "react";
 // EXTERNAL IMPORTS
 import { useQuery } from "@tanstack/react-query";
 //INTERNAL IMPORT
-import { fetchAllMediaContentData } from "../../services/api/http";
-import MediaContentTile from "../media-content-tile/MediaContentTile";
+import { MediaContentData } from "../../types/types";
+import MediaContentTile from "./MediaContentTile";
 import Searchbar from "../search/Searchbar";
 
-const HomeContent = () => {
+type DisplayMediaContentProps = {
+	queryFunction: () => Promise<MediaContentData>;
+};
+
+const DisplayMediaContent = ({ queryFunction }: DisplayMediaContentProps) => {
 	const [query, setQuery] = useState("");
 
 	const getSearchValue = (searchValue: string) => {
@@ -18,7 +22,7 @@ const HomeContent = () => {
 
 	const { data, isFetching, isError } = useQuery({
 		queryKey: ["mediaContent"],
-		queryFn: fetchAllMediaContentData,
+		queryFn: queryFunction,
 	});
 
 	if (isFetching) {
@@ -59,4 +63,4 @@ const HomeContent = () => {
 	);
 };
 
-export default HomeContent;
+export default DisplayMediaContent;

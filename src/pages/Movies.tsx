@@ -1,10 +1,12 @@
-// import HomeContent from "../features/home-page/HomeContent";
+//INTERNAL IMPORTS
+import { fetchMoviesContentData } from "../services/api/http";
+import DisplayMediaContent from "../features/media-content/DisplayMediaContent";
 
 const Movies = () => {
 	return (
 		<>
 			<div>Movies</div>
-			{/* <HomeContent /> */}
+			<DisplayMediaContent queryFunction={fetchMoviesContentData} />
 		</>
 	);
 };

@@ -1,13 +1,14 @@
 //INTERNAL IMPORTS
 import { Outlet } from "react-router-dom";
-import HomeContent from "../features/home-page/HomeContent";
+import DisplayMediaContent from "../features/media-content/DisplayMediaContent";
+import { fetchAllMediaContentData } from "../services/api/http";
 
 const Home = () => {
 	return (
 		<>
 			<div>Home</div>
 			<Outlet />
-			<HomeContent />
+			<DisplayMediaContent queryFunction={fetchAllMediaContentData} />
 		</>
 	);
 };

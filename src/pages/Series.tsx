@@ -1,7 +1,14 @@
-const Series = () => {
-  return (
-    <div>Series</div>
-  )
-}
+//INTERNAL IMPORTS
+import { fetchSeriesContentData } from "../services/api/http";
+import DisplayMediaContent from "../features/media-content/DisplayMediaContent";
 
-export default Series
+const Series = () => {
+	return (
+		<>
+			<div>Series</div>
+			<DisplayMediaContent queryFunction={fetchSeriesContentData} />
+		</>
+	);
+};
+
+export default Series;

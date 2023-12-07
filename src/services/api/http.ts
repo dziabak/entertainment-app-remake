@@ -17,3 +17,71 @@ export const fetchAllMediaContentData = async () => {
 
 	return allMediaContentData;
 };
+
+export const fetchMoviesContentData = async () => {
+	const response = await fetch("../data.json");
+
+	if (!response.ok) {
+		const error = new Error("Data could not be fetched!");
+		throw error;
+	}
+
+	const allMediaContentData: MediaContentData = await response.json();
+
+	const moviesContentData = allMediaContentData.filter((item) => {
+		return item.category.includes("Movie");
+	});
+
+	return moviesContentData;
+};
+
+export const fetchSeriesContentData = async () => {
+	const response = await fetch("../data.json");
+
+	if (!response.ok) {
+		const error = new Error("Data could not be fetched!");
+		throw error;
+	}
+
+	const allMediaContentData: MediaContentData = await response.json();
+
+	const seriesContentData = allMediaContentData.filter((item) => {
+		return item.category.includes("TV Series");
+	});
+
+	return seriesContentData;
+};
+
+export const fetchBookmarkedContentData = async () => {
+	const response = await fetch("../data.json");
+
+	if (!response.ok) {
+		const error = new Error("Data could not be fetched!");
+		throw error;
+	}
+
+	const allMediaContentData: MediaContentData = await response.json();
+
+	const bookmarkedContentData = allMediaContentData.filter((item) => {
+		return item.isBookmarked === true;
+	});
+
+	return bookmarkedContentData;
+};
+
+export const fetchTrendingContentData = async () => {
+	const response = await fetch("../data.json");
+
+	if (!response.ok) {
+		const error = new Error("Data could not be fetched!");
+		throw error;
+	}
+
+	const allMediaContentData: MediaContentData = await response.json();
+
+	const trendingContentData = allMediaContentData.filter((item) => {
+		return item.isTrending === true;
+	});
+
+	return trendingContentData;
+};

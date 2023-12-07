@@ -1,6 +1,6 @@
 //INTERNAL IMPORTS
 import { Outlet } from "react-router-dom";
-import DisplayMediaContent from "../features/media-content/DisplayMediaContent";
+import DisplayMediaContent from "../features/media-content/main-media-content/DisplayMediaContent";
 import { fetchAllMediaContentData } from "../services/api/http";
 
 const Home = () => {

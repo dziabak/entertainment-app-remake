@@ -1,11 +1,13 @@
 // BUILT-IN IMPORTS
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 // EXTERNAL IMPORTS
 import { useQuery } from "@tanstack/react-query";
 //INTERNAL IMPORT
-import { MediaContentData } from "../../types/types";
+import { MediaContentData } from "../../../types/types";
 import MediaContentTile from "./MediaContentTile";
-import Searchbar from "../search/Searchbar";
+import Searchbar from "../../search/Searchbar";
+import DisplayTrendingMediaContent from "../trending-media-content/DisplayTrendingMediaContent";
 
 type DisplayMediaContentProps = {
 	queryFunction: () => Promise<MediaContentData>;
@@ -13,6 +15,7 @@ type DisplayMediaContentProps = {
 
 const DisplayMediaContent = ({ queryFunction }: DisplayMediaContentProps) => {
 	const [query, setQuery] = useState("");
+	const location = useLocation();
 
 	const getSearchValue = (searchValue: string) => {
 		setQuery(searchValue);
@@ -56,6 +59,9 @@ const DisplayMediaContent = ({ queryFunction }: DisplayMediaContentProps) => {
 		<section className="px-6">
 			<div>HomeContent</div>
 			<Searchbar onSearch={getSearchValue} />
+			{location.pathname === "/home" ? (
+				<DisplayTrendingMediaContent />
+			) : undefined}
 			<div className="grid grid-cols-2 gap-6 mt-6 md:grid-cols-3 lg:grid-cols-4">
 				{content}
 			</div>

@@ -8,17 +8,17 @@ const TrendingMediaContentTile = ({
 	year,
 	category,
 	rating,
-	isBookmarked,
-	// isTrending,
-}: MediaContentTileProps) => {
+}: // isBookmarked,
+// isTrending,
+MediaContentTileProps) => {
 	return (
-		<div className="relative w-[240px] h-[140px]">
+		<div className="relative w-[240px] h-[140px] snap-start">
 			<img
 				src={thumbnail.regular.small}
 				alt=""
 				className="object-cover w-full h-full rounded-lg"
 			/>
-            <div className="absolute top-0 w-full h-full rounded-lg bg-gradient-to-t from-black via-transparent"></div>
+			<div className="absolute top-0 w-full h-full rounded-lg bg-gradient-to-t from-black via-transparent"></div>
 			<div className="absolute left-4 bottom-2">
 				<MediaContentTileLabels
 					title={title}
@@ -28,7 +28,7 @@ const TrendingMediaContentTile = ({
 				/>
 			</div>
 			<div className="font-thin font-main text-c-light-blue">
-				{isBookmarked && <p>isBookmarked</p>}
+				{/* {isBookmarked && <p>isBookmarked</p>} */}
 				{/* {isTrending && <p>isTrending</p>} */}
 			</div>
 		</div>

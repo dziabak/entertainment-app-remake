@@ -35,7 +35,11 @@ const DisplayTrendingMediaContent = () => {
 		));
 	}
 
-	return <div className="grid grid-cols-5 gap-64 mt-0 mb-6">{content}</div>;
+	return (
+		<div className="grid grid-flow-col gap-4 mt-0 mb-6 overflow-x-auto overscroll-x-contain auto-cols-max snap-x snap-mandatory no-scrollbar">
+			{content}
+		</div>
+	);
 };
 
 export default DisplayTrendingMediaContent;

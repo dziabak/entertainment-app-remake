@@ -85,3 +85,25 @@ export const fetchTrendingContentData = async () => {
 
 	return trendingContentData;
 };
+
+export const fetchMediaContentItem = async ({
+	id,
+}: {
+	id: string | undefined;
+}) => {
+	const response = await fetch("../data.json");
+
+	if (!response.ok) {
+		const error = new Error("Data could not be fetched!");
+		throw error;
+	}
+
+	const allMediaContentData: MediaContentData = await response.json();
+
+	const filteredData = allMediaContentData.filter((item) => {
+		// const combinedString = combineStrings(job.position, job.company);
+		return item.title === id;
+	});
+
+	return filteredData;
+};

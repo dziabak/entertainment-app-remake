@@ -1,3 +1,5 @@
+//BUILT-IN IMPORTS
+import { Link } from "react-router-dom";
 // INTERNAL IMPORTS
 import { MediaContentTileProps } from "../../../types/types";
 import MediaContentTileLabels from "../reusable-media-content/MediaContentTileLabels";
@@ -12,7 +14,7 @@ const TrendingMediaContentTile = ({
 // isTrending,
 MediaContentTileProps) => {
 	return (
-		<div className="relative w-[240px] h-[140px] snap-start">
+		<Link to={`/${title}`} className="relative w-[240px] h-[140px] snap-start">
 			<img
 				src={thumbnail.regular.small}
 				alt=""
@@ -31,7 +33,7 @@ MediaContentTileProps) => {
 				{/* {isBookmarked && <p>isBookmarked</p>} */}
 				{/* {isTrending && <p>isTrending</p>} */}
 			</div>
-		</div>
+		</Link>
 	);
 };
 

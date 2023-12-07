@@ -7,6 +7,7 @@ import Home from "./Home";
 import Movies from "./Movies";
 import Series from "./Series";
 import Bookmarked from "./Bookmarked";
+import MediaContentDetails from "./MediaContentDetails";
 
 export const router = createBrowserRouter([
 	{
@@ -38,6 +39,7 @@ export const router = createBrowserRouter([
 				path: "/bookmarked",
 				element: <Bookmarked />,
 			},
+			{ path: "/:mediaContentId", element: <MediaContentDetails /> },
 		],
 	},
 ]);

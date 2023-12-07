@@ -1,3 +1,5 @@
+// BUILT-IN IMPORTS
+import { Link } from "react-router-dom";
 //INTERNAL IMPORTS
 import { MediaContentTileProps } from "../../../types/types";
 import MediaContentTileLabels from "../reusable-media-content/MediaContentTileLabels";
@@ -9,11 +11,11 @@ const MediaContentTile = ({
 	category,
 	rating,
 	isBookmarked,
-	// isTrending,
-}: MediaContentTileProps) => {
+}: // isTrending,
+MediaContentTileProps) => {
 	return (
 		// w-[164px] h-[154px]
-		<div className="">
+		<Link to={`/${title}`}>
 			<img src={thumbnail.regular.small} alt="" className="rounded-lg" />
 			<MediaContentTileLabels
 				title={title}
@@ -25,7 +27,8 @@ const MediaContentTile = ({
 				{isBookmarked && <p>isBookmarked</p>}
 				{/* {isTrending && <p>isTrending</p>} */}
 			</div>
-		</div>
+			{/* <Link to={`/${title}`}>LINK</Link> */}
+		</Link>
 	);
 };
 

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 //INTERNAL IMPORTS
 import { MediaContentTileProps } from "../../../types/types";
 import MediaContentTileLabels from "../reusable-media-content/MediaContentTileLabels";
+import MediaContentTilePlayHover from "../reusable-media-content/MediaContentTilePlayHover";
 
 const MediaContentTile = ({
 	title,
@@ -14,9 +15,11 @@ const MediaContentTile = ({
 }: // isTrending,
 MediaContentTileProps) => {
 	return (
-		// w-[164px] h-[154px]
 		<Link to={`/${title}`}>
-			<img src={thumbnail.regular.small} alt="" className="rounded-lg" />
+			<div className="relative group">
+				<img src={thumbnail.regular.small} alt="" className="rounded-lg" />
+				<MediaContentTilePlayHover />
+			</div>
 			<MediaContentTileLabels
 				title={title}
 				year={year}

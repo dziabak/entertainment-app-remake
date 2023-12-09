@@ -2,6 +2,7 @@
 import { QueryClient } from "@tanstack/react-query";
 // INTERNAL IMPORTS
 import { MediaContentData } from "../../types/types";
+import { makeNiceUrl } from "../../utils/make-nice-url";
 
 export const queryClient = new QueryClient();
 
@@ -101,8 +102,8 @@ export const fetchMediaContentItem = async ({
 	const allMediaContentData: MediaContentData = await response.json();
 
 	const filteredData = allMediaContentData.filter((item) => {
-		// const combinedString = combineStrings(job.position, job.company);
-		return item.title === id;
+		const niceUrl = makeNiceUrl(item.title);
+		return niceUrl === id;
 	});
 
 	return filteredData;

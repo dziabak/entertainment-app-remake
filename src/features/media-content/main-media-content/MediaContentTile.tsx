@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { MediaContentTileProps } from "../../../types/types";
 import MediaContentTileLabels from "../reusable-media-content/MediaContentTileLabels";
 import MediaContentTilePlayHover from "../reusable-media-content/MediaContentTilePlayHover";
+import { makeNiceUrl } from "../../../utils/make-nice-url";
 
 const MediaContentTile = ({
 	title,
@@ -14,8 +15,10 @@ const MediaContentTile = ({
 	isBookmarked,
 }: // isTrending,
 MediaContentTileProps) => {
+	const niceUrl = makeNiceUrl(title);
+
 	return (
-		<Link to={`/${title}`}>
+		<Link to={`/${niceUrl}`}>
 			<div className="relative group">
 				<img src={thumbnail.regular.small} alt="" className="rounded-lg" />
 				<MediaContentTilePlayHover />

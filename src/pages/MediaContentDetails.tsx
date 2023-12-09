@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 // INTENRAL IMPORTS
 import { fetchMediaContentItem } from "../services/api/http";
+import MediaContentDetailsView from "../features/details-page/MediaContentDetailsView";
 // import { MediaContentTileProps } from "../types/types";
 
 const MediaContentDetails = () => {
@@ -26,18 +27,22 @@ const MediaContentDetails = () => {
 
 	if (data) {
 		content = data.map((item) => (
-			<div key={item.title}>
-				<p>{item.year}</p>
-				<p>{item.title}</p>
-				<p>{item.category}</p>
-				<p>{item.rating}</p>
-			</div>
+			<MediaContentDetailsView
+				category={item.category}
+				isBookmarked={item.isBookmarked}
+				isTrending={item.isTrending}
+				rating={item.rating}
+				thumbnail={item.thumbnail}
+				title={item.title}
+				year={item.year}
+				key={item.title}
+				description={item.description}
+			/>
 		));
 	}
 
 	return (
 		<>
-			<div>MediaContentDetails</div>
 			{content}
 		</>
 	);

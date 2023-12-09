@@ -9,6 +9,7 @@ export type MediaContentData = {
 	rating: string;
 	isBookmarked: boolean;
 	isTrending: boolean;
+	description?: string;
 }[];
 
 export type MediaContentTileProps = MediaContentData[number];

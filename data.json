@@ -1,457 +1,486 @@
 [
-  {
-    "title": "Beyond Earth",
-    "thumbnail": {
-      "trending": {
-        "small": "./assets/thumbnails/beyond-earth/trending/small.jpg",
-        "large": "./assets/thumbnails/beyond-earth/trending/large.jpg"
-      },
-      "regular": {
-        "small": "./assets/thumbnails/beyond-earth/regular/small.jpg",
-        "medium": "./assets/thumbnails/beyond-earth/regular/medium.jpg",
-        "large": "./assets/thumbnails/beyond-earth/regular/large.jpg"
-      }
-    },
-    "year": 2019,
-    "category": "Movie",
-    "rating": "PG",
-    "isBookmarked": false,
-    "isTrending": true
-  },
-  {
-    "title": "Bottom Gear",
-    "thumbnail": {
-      "trending": {
-        "small": "./assets/thumbnails/bottom-gear/trending/small.jpg",
-        "large": "./assets/thumbnails/bottom-gear/trending/large.jpg"
-      },
-      "regular": {
-        "small": "./assets/thumbnails/bottom-gear/regular/small.jpg",
-        "medium": "./assets/thumbnails/bottom-gear/regular/medium.jpg",
-        "large": "./assets/thumbnails/bottom-gear/regular/large.jpg"
-      }
-    },
-    "year": 2021,
-    "category": "Movie",
-    "rating": "PG",
-    "isBookmarked": false,
-    "isTrending": true
-  },
-  {
-    "title": "Undiscovered Cities",
-    "thumbnail": {
-      "trending": {
-        "small": "./assets/thumbnails/undiscovered-cities/trending/small.jpg",
-        "large": "./assets/thumbnails/undiscovered-cities/trending/large.jpg"
-      },
-      "regular": {
-        "small": "./assets/thumbnails/undiscovered-cities/regular/small.jpg",
-        "medium": "./assets/thumbnails/undiscovered-cities/regular/medium.jpg",
-        "large": "./assets/thumbnails/undiscovered-cities/regular/large.jpg"
-      }
-    },
-    "year": 2019,
-    "category": "TV Series",
-    "rating": "E",
-    "isBookmarked": false,
-    "isTrending": true
-  },
-  {
-    "title": "1998",
-    "thumbnail": {
-      "trending": {
-        "small": "./assets/thumbnails/1998/trending/small.jpg",
-        "large": "./assets/thumbnails/1998/trending/large.jpg"
-      },
-      "regular": {
-        "small": "./assets/thumbnails/1998/regular/small.jpg",
-        "medium": "./assets/thumbnails/1998/regular/medium.jpg",
-        "large": "./assets/thumbnails/1998/regular/large.jpg"
-      }
-    },
-    "year": 2021,
-    "category": "Movie",
-    "rating": "18+",
-    "isBookmarked": false,
-    "isTrending": true
-  },
-  {
-    "title": "Dark Side of the Moon",
-    "thumbnail": {
-      "trending": {
-        "small": "./assets/thumbnails/dark-side-of-the-moon/trending/small.jpg",
-        "large": "./assets/thumbnails/dark-side-of-the-moon/trending/large.jpg"
-      },
-      "regular": {
-        "small": "./assets/thumbnails/dark-side-of-the-moon/regular/small.jpg",
-        "medium": "./assets/thumbnails/dark-side-of-the-moon/regular/medium.jpg",
-        "large": "./assets/thumbnails/dark-side-of-the-moon/regular/large.jpg"
-      }
-    },
-    "year": 2018,
-    "category": "TV Series",
-    "rating": "PG",
-    "isBookmarked": true,
-    "isTrending": true
-  },
-  {
-    "title": "The Great Lands",
-    "thumbnail": {
-      "regular": {
-        "small": "./assets/thumbnails/the-great-lands/regular/small.jpg",
-        "medium": "./assets/thumbnails/the-great-lands/regular/medium.jpg",
-        "large": "./assets/thumbnails/the-great-lands/regular/large.jpg"
-      }
-    },
-    "year": 2019,
-    "category": "Movie",
-    "rating": "E",
-    "isBookmarked": false,
-    "isTrending": false
-  },
-  {
-    "title": "The Diary",
-    "thumbnail": {
-      "regular": {
-        "small": "./assets/thumbnails/the-diary/regular/small.jpg",
-        "medium": "./assets/thumbnails/the-diary/regular/medium.jpg",
-        "large": "./assets/thumbnails/the-diary/regular/large.jpg"
-      }
-    },
-    "year": 2019,
-    "category": "TV Series",
-    "rating": "PG",
-    "isBookmarked": false,
-    "isTrending": false
-  },
-  {
-    "title": "Earth’s Untouched",
-    "thumbnail": {
-      "regular": {
-        "small": "./assets/thumbnails/earths-untouched/regular/small.jpg",
-        "medium": "./assets/thumbnails/earths-untouched/regular/medium.jpg",
-        "large": "./assets/thumbnails/earths-untouched/regular/large.jpg"
-      }
-    },
-    "year": 2017,
-    "category": "Movie",
-    "rating": "18+",
-    "isBookmarked": true,
-    "isTrending": false
-  },
-  {
-    "title": "No Land Beyond",
-    "thumbnail": {
-      "regular": {
-        "small": "./assets/thumbnails/no-land-beyond/regular/small.jpg",
-        "medium": "./assets/thumbnails/no-land-beyond/regular/medium.jpg",
-        "large": "./assets/thumbnails/no-land-beyond/regular/large.jpg"
-      }
-    },
-    "year": 2019,
-    "category": "Movie",
-    "rating": "E",
-    "isBookmarked": false,
-    "isTrending": false
-  },
-  {
-    "title": "During the Hunt",
-    "thumbnail": {
-      "regular": {
-        "small": "./assets/thumbnails/during-the-hunt/regular/small.jpg",
-        "medium": "./assets/thumbnails/during-the-hunt/regular/medium.jpg",
-        "large": "./assets/thumbnails/during-the-hunt/regular/large.jpg"
-      }
-    },
-    "year": 2016,
-    "category": "TV Series",
-    "rating": "PG",
-    "isBookmarked": false,
-    "isTrending": false
-  },
-  {
-    "title": "Autosport the Series",
-    "thumbnail": {
-      "regular": {
-        "small": "./assets/thumbnails/autosport-the-series/regular/small.jpg",
-        "medium": "./assets/thumbnails/autosport-the-series/regular/medium.jpg",
-        "large": "./assets/thumbnails/autosport-the-series/regular/large.jpg"
-      }
-    },
-    "year": 2016,
-    "category": "TV Series",
-    "rating": "18+",
-    "isBookmarked": false,
-    "isTrending": false
-  },
-  {
-    "title": "Same Answer II",
-    "thumbnail": {
-      "regular": {
-        "small": "./assets/thumbnails/same-answer-2/regular/small.jpg",
-        "medium": "./assets/thumbnails/same-answer-2/regular/medium.jpg",
-        "large": "./assets/thumbnails/same-answer-2/regular/large.jpg"
-      }
-    },
-    "year": 2017,
-    "category": "Movie",
-    "rating": "E",
-    "isBookmarked": false,
-    "isTrending": false
-  },
-  {
-    "title": "Below Echo",
-    "thumbnail": {
-      "regular": {
-        "small": "./assets/thumbnails/below-echo/regular/small.jpg",
-        "medium": "./assets/thumbnails/below-echo/regular/medium.jpg",
-        "large": "./assets/thumbnails/below-echo/regular/large.jpg"
-      }
-    },
-    "year": 2016,
-    "category": "TV Series",
-    "rating": "PG",
-    "isBookmarked": false,
-    "isTrending": false
-  },
-  {
-    "title": "The Rockies",
-    "thumbnail": {
-      "regular": {
-        "small": "./assets/thumbnails/the-rockies/regular/small.jpg",
-        "medium": "./assets/thumbnails/the-rockies/regular/medium.jpg",
-        "large": "./assets/thumbnails/the-rockies/regular/large.jpg"
-      }
-    },
-    "year": 2015,
-    "category": "TV Series",
-    "rating": "E",
-    "isBookmarked": true,
-    "isTrending": false
-  },
-  {
-    "title": "Relentless",
-    "thumbnail": {
-      "regular": {
-        "small": "./assets/thumbnails/relentless/regular/small.jpg",
-        "medium": "./assets/thumbnails/relentless/regular/medium.jpg",
-        "large": "./assets/thumbnails/relentless/regular/large.jpg"
-      }
-    },
-    "year": 2017,
-    "category": "Movie",
-    "rating": "PG",
-    "isBookmarked": true,
-    "isTrending": false
-  },
-  {
-    "title": "Community of Ours",
-    "thumbnail": {
-      "regular": {
-        "small": "./assets/thumbnails/community-of-ours/regular/small.jpg",
-        "medium": "./assets/thumbnails/community-of-ours/regular/medium.jpg",
-        "large": "./assets/thumbnails/community-of-ours/regular/large.jpg"
-      }
-    },
-    "year": 2018,
-    "category": "TV Series",
-    "rating": "18+",
-    "isBookmarked": false,
-    "isTrending": false
-  },
-  {
-    "title": "Van Life",
-    "thumbnail": {
-      "regular": {
-        "small": "./assets/thumbnails/van-life/regular/small.jpg",
-        "medium": "./assets/thumbnails/van-life/regular/medium.jpg",
-        "large": "./assets/thumbnails/van-life/regular/large.jpg"
-      }
-    },
-    "year": 2015,
-    "category": "Movie",
-    "rating": "PG",
-    "isBookmarked": false,
-    "isTrending": false
-  },
-  {
-    "title": "The Heiress",
-    "thumbnail": {
-      "regular": {
-        "small": "./assets/thumbnails/the-heiress/regular/small.jpg",
-        "medium": "./assets/thumbnails/the-heiress/regular/medium.jpg",
-        "large": "./assets/thumbnails/the-heiress/regular/large.jpg"
-      }
-    },
-    "year": 2021,
-    "category": "Movie",
-    "rating": "PG",
-    "isBookmarked": true,
-    "isTrending": false
-  },
-  {
-    "title": "Off the Track",
-    "thumbnail": {
-      "regular": {
-        "small": "./assets/thumbnails/off-the-track/regular/small.jpg",
-        "medium": "./assets/thumbnails/off-the-track/regular/medium.jpg",
-        "large": "./assets/thumbnails/off-the-track/regular/large.jpg"
-      }
-    },
-    "year": 2017,
-    "category": "Movie",
-    "rating": "18+",
-    "isBookmarked": true,
-    "isTrending": false
-  },
-  {
-    "title": "Whispering Hill",
-    "thumbnail": {
-      "regular": {
-        "small": "./assets/thumbnails/whispering-hill/regular/small.jpg",
-        "medium": "./assets/thumbnails/whispering-hill/regular/medium.jpg",
-        "large": "./assets/thumbnails/whispering-hill/regular/large.jpg"
-      }
-    },
-    "year": 2017,
-    "category": "Movie",
-    "rating": "E",
-    "isBookmarked": false,
-    "isTrending": false
-  },
-  {
-    "title": "112",
-    "thumbnail": {
-      "regular": {
-        "small": "./assets/thumbnails/112/regular/small.jpg",
-        "medium": "./assets/thumbnails/112/regular/medium.jpg",
-        "large": "./assets/thumbnails/112/regular/large.jpg"
-      }
-    },
-    "year": 2013,
-    "category": "TV Series",
-    "rating": "PG",
-    "isBookmarked": false,
-    "isTrending": false
-  },
-  {
-    "title": "Lone Heart",
-    "thumbnail": {
-      "regular": {
-        "small": "./assets/thumbnails/lone-heart/regular/small.jpg",
-        "medium": "./assets/thumbnails/lone-heart/regular/medium.jpg",
-        "large": "./assets/thumbnails/lone-heart/regular/large.jpg"
-      }
-    },
-    "year": 2017,
-    "category": "Movie",
-    "rating": "E",
-    "isBookmarked": true,
-    "isTrending": false
-  },
-  {
-    "title": "Production Line",
-    "thumbnail": {
-      "regular": {
-        "small": "./assets/thumbnails/production-line/regular/small.jpg",
-        "medium": "./assets/thumbnails/production-line/regular/medium.jpg",
-        "large": "./assets/thumbnails/production-line/regular/large.jpg"
-      }
-    },
-    "year": 2018,
-    "category": "TV Series",
-    "rating": "PG",
-    "isBookmarked": false,
-    "isTrending": false
-  },
-  {
-    "title": "Dogs",
-    "thumbnail": {
-      "regular": {
-        "small": "./assets/thumbnails/dogs/regular/small.jpg",
-        "medium": "./assets/thumbnails/dogs/regular/medium.jpg",
-        "large": "./assets/thumbnails/dogs/regular/large.jpg"
-      }
-    },
-    "year": 2016,
-    "category": "TV Series",
-    "rating": "E",
-    "isBookmarked": true,
-    "isTrending": false
-  },
-  {
-    "title": "Asia in 24 Days",
-    "thumbnail": {
-      "regular": {
-        "small": "./assets/thumbnails/asia-in-24-days/regular/small.jpg",
-        "medium": "./assets/thumbnails/asia-in-24-days/regular/medium.jpg",
-        "large": "./assets/thumbnails/asia-in-24-days/regular/large.jpg"
-      }
-    },
-    "year": 2020,
-    "category": "TV Series",
-    "rating": "PG",
-    "isBookmarked": false,
-    "isTrending": false
-  },
-  {
-    "title": "The Tasty Tour",
-    "thumbnail": {
-      "regular": {
-        "small": "./assets/thumbnails/the-tasty-tour/regular/small.jpg",
-        "medium": "./assets/thumbnails/the-tasty-tour/regular/medium.jpg",
-        "large": "./assets/thumbnails/the-tasty-tour/regular/large.jpg"
-      }
-    },
-    "year": 2016,
-    "category": "TV Series",
-    "rating": "PG",
-    "isBookmarked": false,
-    "isTrending": false
-  },
-  {
-    "title": "Darker",
-    "thumbnail": {
-      "regular": {
-        "small": "./assets/thumbnails/darker/regular/small.jpg",
-        "medium": "./assets/thumbnails/darker/regular/medium.jpg",
-        "large": "./assets/thumbnails/darker/regular/large.jpg"
-      }
-    },
-    "year": 2017,
-    "category": "Movie",
-    "rating": "18+",
-    "isBookmarked": true,
-    "isTrending": false
-  },
-  {
-    "title": "Unresolved Cases",
-    "thumbnail": {
-      "regular": {
-        "small": "./assets/thumbnails/unresolved-cases/regular/small.jpg",
-        "medium": "./assets/thumbnails/unresolved-cases/regular/medium.jpg",
-        "large": "./assets/thumbnails/unresolved-cases/regular/large.jpg"
-      }
-    },
-    "year": 2018,
-    "category": "TV Series",
-    "rating": "18+",
-    "isBookmarked": false,
-    "isTrending": false
-  },
-  {
-    "title": "Mission: Saturn",
-    "thumbnail": {
-      "regular": {
-        "small": "./assets/thumbnails/mission-saturn/regular/small.jpg",
-        "medium": "./assets/thumbnails/mission-saturn/regular/medium.jpg",
-        "large": "./assets/thumbnails/mission-saturn/regular/large.jpg"
-      }
-    },
-    "year": 2017,
-    "category": "Movie",
-    "rating": "PG",
-    "isBookmarked": true,
-    "isTrending": false
-  }
+	{
+		"title": "Beyond Earth",
+		"thumbnail": {
+			"trending": {
+				"small": "./assets/thumbnails/beyond-earth/trending/small.jpg",
+				"large": "./assets/thumbnails/beyond-earth/trending/large.jpg"
+			},
+			"regular": {
+				"small": "./assets/thumbnails/beyond-earth/regular/small.jpg",
+				"medium": "./assets/thumbnails/beyond-earth/regular/medium.jpg",
+				"large": "./assets/thumbnails/beyond-earth/regular/large.jpg"
+			}
+		},
+		"year": 2019,
+		"category": "Movie",
+		"rating": "PG",
+		"isBookmarked": false,
+		"isTrending": true,
+		"description": "Embark on a mesmerizing journey in 'Beyond Earth,' a groundbreaking movie that transports viewers to an uncharted realm. As humanity faces unknown challenges, the film unfolds a narrative of courage, discovery, and the indomitable spirit of exploration. With stunning visuals and a compelling storyline, 'Beyond Earth' promises an unforgettable cinematic experience."
+	},
+	{
+		"title": "Bottom Gear",
+		"thumbnail": {
+			"trending": {
+				"small": "./assets/thumbnails/bottom-gear/trending/small.jpg",
+				"large": "./assets/thumbnails/bottom-gear/trending/large.jpg"
+			},
+			"regular": {
+				"small": "./assets/thumbnails/bottom-gear/regular/small.jpg",
+				"medium": "./assets/thumbnails/bottom-gear/regular/medium.jpg",
+				"large": "./assets/thumbnails/bottom-gear/regular/large.jpg"
+			}
+		},
+		"year": 2021,
+		"category": "Movie",
+		"rating": "PG",
+		"isBookmarked": false,
+		"isTrending": true,
+		"description": "Join the adrenaline-fueled adventure in 'Bottom Gear,' a high-octane movie that revs up the excitement with fast cars, epic stunts, and a race against time. Buckle up for a thrilling ride as the film delivers heart-pounding action and jaw-dropping sequences, making it a must-watch for fans of speed and excitement."
+	},
+	{
+		"title": "Undiscovered Cities",
+		"thumbnail": {
+			"trending": {
+				"small": "./assets/thumbnails/undiscovered-cities/trending/small.jpg",
+				"large": "./assets/thumbnails/undiscovered-cities/trending/large.jpg"
+			},
+			"regular": {
+				"small": "./assets/thumbnails/undiscovered-cities/regular/small.jpg",
+				"medium": "./assets/thumbnails/undiscovered-cities/regular/medium.jpg",
+				"large": "./assets/thumbnails/undiscovered-cities/regular/large.jpg"
+			}
+		},
+		"year": 2019,
+		"category": "TV Series",
+		"rating": "E",
+		"isBookmarked": false,
+		"isTrending": true,
+		"description": "Uncover the hidden gems of the world in 'Undiscovered Cities,' a captivating TV series that takes viewers on a mesmerizing journey to explore the beauty of lesser-known urban landscapes. With each episode, the series unveils the unique culture, history, and architecture of these undiscovered cities, creating a visual and cultural feast for the audience."
+	},
+	{
+		"title": "1998",
+		"thumbnail": {
+			"trending": {
+				"small": "./assets/thumbnails/1998/trending/small.jpg",
+				"large": "./assets/thumbnails/1998/trending/large.jpg"
+			},
+			"regular": {
+				"small": "./assets/thumbnails/1998/regular/small.jpg",
+				"medium": "./assets/thumbnails/1998/regular/medium.jpg",
+				"large": "./assets/thumbnails/1998/regular/large.jpg"
+			}
+		},
+		"year": 2021,
+		"category": "Movie",
+		"rating": "18+",
+		"isBookmarked": false,
+		"isTrending": true,
+		"description": "Step into the enigmatic world of '1998,' a gripping movie set against the backdrop of a transformative year. This intense and mature film delves into the complexities of life, love, and self-discovery, offering a thought-provoking narrative that resonates with the audience. As the characters navigate through the challenges of 1998, the film unravels a compelling story that keeps viewers on the edge of their seats."
+	},
+	{
+		"title": "Dark Side of the Moon",
+		"thumbnail": {
+			"trending": {
+				"small": "./assets/thumbnails/dark-side-of-the-moon/trending/small.jpg",
+				"large": "./assets/thumbnails/dark-side-of-the-moon/trending/large.jpg"
+			},
+			"regular": {
+				"small": "./assets/thumbnails/dark-side-of-the-moon/regular/small.jpg",
+				"medium": "./assets/thumbnails/dark-side-of-the-moon/regular/medium.jpg",
+				"large": "./assets/thumbnails/dark-side-of-the-moon/regular/large.jpg"
+			}
+		},
+		"year": 2018,
+		"category": "TV Series",
+		"rating": "PG",
+		"isBookmarked": true,
+		"isTrending": true,
+		"description": "Explore the mysteries of the cosmos in 'Dark Side of the Moon,' a mind-bending TV series that delves into the uncharted realms beyond our celestial neighbor. With a perfect blend of science fiction and suspense, the series takes viewers on a cosmic journey filled with unexpected twists and revelations. As the characters navigate the challenges of the dark side, the show unfolds a narrative that transcends the boundaries of conventional storytelling."
+	},
+	{
+		"title": "The Great Lands",
+		"thumbnail": {
+			"regular": {
+				"small": "./assets/thumbnails/the-great-lands/regular/small.jpg",
+				"medium": "./assets/thumbnails/the-great-lands/regular/medium.jpg",
+				"large": "./assets/thumbnails/the-great-lands/regular/large.jpg"
+			}
+		},
+		"year": 2019,
+		"category": "Movie",
+		"rating": "E",
+		"isBookmarked": false,
+		"isTrending": false,
+		"description": "Embark on a magical adventure in 'The Great Lands,' a family-friendly movie that transports audiences to a world of wonder and enchantment. Filled with captivating characters, breathtaking landscapes, and a heartwarming storyline, the film invites viewers of all ages to experience the joy of imagination and the power of friendship. 'The Great Lands' promises a cinematic journey that captivates the senses and leaves a lasting impression."
+	},
+	{
+		"title": "The Diary",
+		"thumbnail": {
+			"regular": {
+				"small": "./assets/thumbnails/the-diary/regular/small.jpg",
+				"medium": "./assets/thumbnails/the-diary/regular/medium.jpg",
+				"large": "./assets/thumbnails/the-diary/regular/large.jpg"
+			}
+		},
+		"year": 2019,
+		"category": "TV Series",
+		"rating": "PG",
+		"isBookmarked": false,
+		"isTrending": false,
+		"description": "Uncover the secrets of 'The Diary' in this emotionally charged TV series that takes viewers on a rollercoaster of highs and lows. As the characters pour their hearts onto the pages, the show unravels a tapestry of human emotions, relationships, and the pursuit of self-discovery. With each entry, 'The Diary' creates a profound connection with the audience, inviting them to share in the joys and sorrows of the characters' lives."
+	},
+	{
+		"title": "Earth’s Untouched",
+		"thumbnail": {
+			"regular": {
+				"small": "./assets/thumbnails/earths-untouched/regular/small.jpg",
+				"medium": "./assets/thumbnails/earths-untouched/regular/medium.jpg",
+				"large": "./assets/thumbnails/earths-untouched/regular/large.jpg"
+			}
+		},
+		"year": 2017,
+		"category": "Movie",
+		"rating": "18+",
+		"isBookmarked": true,
+		"isTrending": false,
+		"description": "Immerse yourself in the raw beauty of nature in 'Earth’s Untouched,' a visually stunning movie that captures the essence of untouched landscapes. From serene mountains to pristine forests, the film showcases the breathtaking diversity of our planet, inviting viewers to reflect on the importance of conservation and appreciation for the natural world. Through cinematic artistry and a compelling narrative, 'Earth’s Untouched' delivers a powerful message about the fragility and resilience of our environment."
+	},
+	{
+		"title": "No Land Beyond",
+		"thumbnail": {
+			"regular": {
+				"small": "./assets/thumbnails/no-land-beyond/regular/small.jpg",
+				"medium": "./assets/thumbnails/no-land-beyond/regular/medium.jpg",
+				"large": "./assets/thumbnails/no-land-beyond/regular/large.jpg"
+			}
+		},
+		"year": 2019,
+		"category": "Movie",
+		"rating": "E",
+		"isBookmarked": false,
+		"isTrending": false,
+		"description": "'No Land Beyond' invites audiences of all ages on a magical journey filled with wonder, discovery, and heartwarming moments. As characters navigate the enchanting landscapes of a fantastical world, the movie unfolds a narrative that celebrates the power of imagination and the bonds of friendship. With a blend of adventure, humor, and heartfelt emotion, 'No Land Beyond' promises to transport viewers to a place where dreams come to life."
+	},
+	{
+		"title": "During the Hunt",
+		"thumbnail": {
+			"regular": {
+				"small": "./assets/thumbnails/during-the-hunt/regular/small.jpg",
+				"medium": "./assets/thumbnails/during-the-hunt/regular/medium.jpg",
+				"large": "./assets/thumbnails/during-the-hunt/regular/large.jpg"
+			}
+		},
+		"year": 2016,
+		"category": "TV Series",
+		"rating": "PG",
+		"isBookmarked": false,
+		"isTrending": false,
+		"description": "Buckle up for a pulse-pounding experience in 'During the Hunt,' a suspenseful TV series that keeps viewers on the edge of their seats. As the characters navigate the twists and turns of a high-stakes pursuit, the show delivers gripping storytelling, unexpected alliances, and nail-biting suspense. With each episode, 'During the Hunt' builds tension and excitement, making it a must-watch for fans of thrilling drama and mystery."
+	},
+	{
+		"title": "Autosport the Series",
+		"thumbnail": {
+			"regular": {
+				"small": "./assets/thumbnails/autosport-the-series/regular/small.jpg",
+				"medium": "./assets/thumbnails/autosport-the-series/regular/medium.jpg",
+				"large": "./assets/thumbnails/autosport-the-series/regular/large.jpg"
+			}
+		},
+		"year": 2016,
+		"category": "TV Series",
+		"rating": "18+",
+		"isBookmarked": false,
+		"isTrending": false,
+		"description": "Feel the adrenaline rush in 'Autosport the Series,' an action-packed TV series that takes viewers into the heart of high-speed racing. From roaring engines to intense rivalries, the show captures the thrill of the track, offering a front-row seat to the drama, triumphs, and challenges of competitive motorsports. With a dynamic cast and stunning visuals, 'Autosport the Series' promises an immersive experience for racing enthusiasts and adrenaline junkies alike."
+	},
+	{
+		"title": "Same Answer II",
+		"thumbnail": {
+			"regular": {
+				"small": "./assets/thumbnails/same-answer-2/regular/small.jpg",
+				"medium": "./assets/thumbnails/same-answer-2/regular/medium.jpg",
+				"large": "./assets/thumbnails/same-answer-2/regular/large.jpg"
+			}
+		},
+		"year": 2017,
+		"category": "Movie",
+		"rating": "E",
+		"isBookmarked": false,
+		"isTrending": false,
+		"description": "Laugh, cry, and be inspired in 'Same Answer II,' a heartwarming movie that explores the universal themes of love, resilience, and the human spirit. With a perfect blend of humor and heartfelt moments, the film follows the interconnected lives of characters facing the ups and downs of life. Through its relatable storytelling and charming characters, 'Same Answer II' delivers a message of hope, reminding viewers that, despite our differences, we share common threads that bind us together."
+	},
+	{
+		"title": "Below Echo",
+		"thumbnail": {
+			"regular": {
+				"small": "./assets/thumbnails/below-echo/regular/small.jpg",
+				"medium": "./assets/thumbnails/below-echo/regular/medium.jpg",
+				"large": "./assets/thumbnails/below-echo/regular/large.jpg"
+			}
+		},
+		"year": 2016,
+		"category": "TV Series",
+		"rating": "PG",
+		"isBookmarked": false,
+		"isTrending": false,
+		"description": "Unravel the mysteries of the unknown in 'Below Echo,' a captivating TV series that combines suspense, drama, and the supernatural. As characters journey into uncharted territories, the show explores the depths of human emotion, fear, and the unexplained. With each episode, 'Below Echo' builds an immersive world filled with secrets and surprises, keeping viewers hooked on the edge of their seats."
+	},
+	{
+		"title": "The Rockies",
+		"thumbnail": {
+			"regular": {
+				"small": "./assets/thumbnails/the-rockies/regular/small.jpg",
+				"medium": "./assets/thumbnails/the-rockies/regular/medium.jpg",
+				"large": "./assets/thumbnails/the-rockies/regular/large.jpg"
+			}
+		},
+		"year": 2015,
+		"category": "TV Series",
+		"rating": "E",
+		"isBookmarked": true,
+		"isTrending": false,
+		"description": "Embark on a breathtaking adventure through 'The Rockies,' a visually stunning TV series that showcases the majestic beauty of this iconic mountain range. From snow-capped peaks to lush valleys, the show takes viewers on a captivating journey through nature's grandeur. Through a combination of breathtaking cinematography and informative storytelling, 'The Rockies' invites audiences to witness the untamed beauty and ecological diversity of this awe-inspiring landscape."
+	},
+	{
+		"title": "Relentless",
+		"thumbnail": {
+			"regular": {
+				"small": "./assets/thumbnails/relentless/regular/small.jpg",
+				"medium": "./assets/thumbnails/relentless/regular/medium.jpg",
+				"large": "./assets/thumbnails/relentless/regular/large.jpg"
+			}
+		},
+		"year": 2017,
+		"category": "Movie",
+		"rating": "PG",
+		"isBookmarked": true,
+		"isTrending": false,
+		"description": "Brace yourself for an intense cinematic ride with 'Relentless,' a gripping movie that seamlessly blends action, suspense, and emotional depth. As characters face formidable challenges, the film unfolds a narrative of resilience, courage, and the unbreakable human spirit. With its heart-pounding sequences and compelling storytelling, 'Relentless' keeps viewers on the edge of their seats, making it a must-watch for fans of adrenaline-fueled drama."
+	},
+	{
+		"title": "Community of Ours",
+		"thumbnail": {
+			"regular": {
+				"small": "./assets/thumbnails/community-of-ours/regular/small.jpg",
+				"medium": "./assets/thumbnails/community-of-ours/regular/medium.jpg",
+				"large": "./assets/thumbnails/community-of-ours/regular/large.jpg"
+			}
+		},
+		"year": 2018,
+		"category": "TV Series",
+		"rating": "18+",
+		"isBookmarked": false,
+		"isTrending": false,
+		"description": "Step into the heartwarming world of 'Community of Ours,' a TV series that celebrates the bonds of friendship, love, and community. With relatable characters and a charming setting, the show weaves together heartfelt stories that resonate with audiences of all ages. 'Community of Ours' invites viewers to laugh, cry, and share in the joys and struggles of the characters as they navigate life's journey together."
+	},
+	{
+		"title": "Van Life",
+		"thumbnail": {
+			"regular": {
+				"small": "./assets/thumbnails/van-life/regular/small.jpg",
+				"medium": "./assets/thumbnails/van-life/regular/medium.jpg",
+				"large": "./assets/thumbnails/van-life/regular/large.jpg"
+			}
+		},
+		"year": 2015,
+		"category": "Movie",
+		"rating": "PG",
+		"isBookmarked": false,
+		"isTrending": false,
+		"description": "Experience the freedom of the open road in 'Van Life,' an adventurous movie that takes viewers on a journey of self-discovery and exploration. From picturesque landscapes to unexpected encounters, the film captures the essence of nomadic living and the pursuit of a life less ordinary. With its vibrant characters and scenic vistas, 'Van Life' offers a cinematic escape that inspires a sense of wanderlust and the desire to embrace the beauty of the world."
+	},
+	{
+		"title": "The Heiress",
+		"thumbnail": {
+			"regular": {
+				"small": "./assets/thumbnails/the-heiress/regular/small.jpg",
+				"medium": "./assets/thumbnails/the-heiress/regular/medium.jpg",
+				"large": "./assets/thumbnails/the-heiress/regular/large.jpg"
+			}
+		},
+		"year": 2021,
+		"category": "Movie",
+		"rating": "PG",
+		"isBookmarked": true,
+		"isTrending": false,
+		"description": "Delve into a world of intrigue and drama in 'The Heiress,' a captivating movie that unravels a tale of secrets, betrayal, and the complexities of wealth. With its compelling characters and suspenseful plot twists, the film keeps audiences guessing until the very end. 'The Heiress' explores the consequences of privilege and the power dynamics within a wealthy family, creating a riveting narrative that explores the darker corners of human nature."
+	},
+	{
+		"title": "Off the Track",
+		"thumbnail": {
+			"regular": {
+				"small": "./assets/thumbnails/off-the-track/regular/small.jpg",
+				"medium": "./assets/thumbnails/off-the-track/regular/medium.jpg",
+				"large": "./assets/thumbnails/off-the-track/regular/large.jpg"
+			}
+		},
+		"year": 2017,
+		"category": "Movie",
+		"rating": "18+",
+		"isBookmarked": true,
+		"isTrending": false,
+		"description": "Fasten your seatbelts for a thrilling ride in 'Off the Track,' an adrenaline-pumping movie that explores the high-stakes world of competitive racing. From roaring engines to intense rivalries, the film captures the excitement and drama of the track, offering a cinematic experience that appeals to fans of speed and competition. With its dynamic characters and high-energy sequences, 'Off the Track' promises a visceral and exhilarating journey into the heart of motorsports."
+	},
+	{
+		"title": "Whispering Hill",
+		"thumbnail": {
+			"regular": {
+				"small": "./assets/thumbnails/whispering-hill/regular/small.jpg",
+				"medium": "./assets/thumbnails/whispering-hill/regular/medium.jpg",
+				"large": "./assets/thumbnails/whispering-hill/regular/large.jpg"
+			}
+		},
+		"year": 2017,
+		"category": "Movie",
+		"rating": "E",
+		"isBookmarked": false,
+		"isTrending": false,
+		"description": "Escape to the serenity of 'Whispering Hill,' a peaceful and enchanting movie that invites viewers to experience the tranquility of nature. From rolling hills to gentle streams, the film captures the essence of a serene landscape, creating a cinematic retreat for the soul. Through its calming visuals and soothing soundtrack, 'Whispering Hill' provides a welcome respite from the hustle and bustle of everyday life, offering a moment of reflection and connection with the beauty of the natural world."
+	},
+	{
+		"title": "112",
+		"thumbnail": {
+			"regular": {
+				"small": "./assets/thumbnails/112/regular/small.jpg",
+				"medium": "./assets/thumbnails/112/regular/medium.jpg",
+				"large": "./assets/thumbnails/112/regular/large.jpg"
+			}
+		},
+		"year": 2013,
+		"category": "TV Series",
+		"rating": "PG",
+		"isBookmarked": false,
+		"isTrending": false,
+		"description": "Solve mysteries in '112,' a gripping TV series that follows a dedicated team of investigators as they unravel complex cases. From crime scenes to interrogations, the show provides a realistic and suspenseful portrayal of the investigative process. '112' keeps viewers on the edge of their seats with its compelling storytelling, intricate plotlines, and a cast of characters that brings the world of criminal investigation to life."
+	},
+	{
+		"title": "Lone Heart",
+		"thumbnail": {
+			"regular": {
+				"small": "./assets/thumbnails/lone-heart/regular/small.jpg",
+				"medium": "./assets/thumbnails/lone-heart/regular/medium.jpg",
+				"large": "./assets/thumbnails/lone-heart/regular/large.jpg"
+			}
+		},
+		"year": 2017,
+		"category": "Movie",
+		"rating": "E",
+		"isBookmarked": true,
+		"isTrending": false,
+		"description": "Journey through a spectrum of emotions in 'Lone Heart,' a touching movie that explores the depths of the human experience. Through moments of joy, sorrow, love, and loss, the film weaves a narrative that resonates with the complexities of the human heart. With its relatable characters and poignant storytelling, 'Lone Heart' invites viewers to connect with the universal themes of life, making it a heartfelt and emotionally enriching cinematic experience."
+	},
+	{
+		"title": "Production Line",
+		"thumbnail": {
+			"regular": {
+				"small": "./assets/thumbnails/production-line/regular/small.jpg",
+				"medium": "./assets/thumbnails/production-line/regular/medium.jpg",
+				"large": "./assets/thumbnails/production-line/regular/large.jpg"
+			}
+		},
+		"year": 2018,
+		"category": "TV Series",
+		"rating": "PG",
+		"isBookmarked": false,
+		"isTrending": false,
+		"description": "Take a peek behind the scenes in 'Production Line,' a fascinating TV series that explores the intricate process of filmmaking. From scriptwriting to set design, the show provides an insider's view of the creative and logistical challenges involved in bringing stories to life on the screen. 'Production Line' combines informative insights with entertaining anecdotes, offering a dynamic and engaging portrayal of the collaborative efforts that go into producing captivating cinema."
+	},
+	{
+		"title": "Dogs",
+		"thumbnail": {
+			"regular": {
+				"small": "./assets/thumbnails/dogs/regular/small.jpg",
+				"medium": "./assets/thumbnails/dogs/regular/medium.jpg",
+				"large": "./assets/thumbnails/dogs/regular/large.jpg"
+			}
+		},
+		"year": 2016,
+		"category": "TV Series",
+		"rating": "E",
+		"isBookmarked": true,
+		"isTrending": false,
+		"description": "Celebrate the unbreakable bond between humans and their furry companions in 'Dogs,' a heartwarming TV series that showcases heartwarming stories of love, loyalty, and companionship. From heartwarming reunions to tales of extraordinary canine courage, the show explores the profound connections that exist between people and their dogs. 'Dogs' is a heartfelt tribute to the special relationships that enrich our lives and reminds us of the unique and unconditional love that our four-legged friends bring into our homes."
+	},
+	{
+		"title": "Asia in 24 Days",
+		"thumbnail": {
+			"regular": {
+				"small": "./assets/thumbnails/asia-in-24-days/regular/small.jpg",
+				"medium": "./assets/thumbnails/asia-in-24-days/regular/medium.jpg",
+				"large": "./assets/thumbnails/asia-in-24-days/regular/large.jpg"
+			}
+		},
+		"year": 2020,
+		"category": "TV Series",
+		"rating": "PG",
+		"isBookmarked": false,
+		"isTrending": false,
+		"description": "Embark on an epic journey across Asia in 'Asia in 24 Days,' a visually stunning TV series that captures the diverse landscapes, cultures, and cuisines of the continent. From bustling metropolises to serene landscapes, the show offers a panoramic view of the rich tapestry of Asia. Through immersive storytelling and breathtaking cinematography, 'Asia in 24 Days' invites viewers to explore the beauty and diversity that define this vast and vibrant part of the world."
+	},
+	{
+		"title": "The Tasty Tour",
+		"thumbnail": {
+			"regular": {
+				"small": "./assets/thumbnails/the-tasty-tour/regular/small.jpg",
+				"medium": "./assets/thumbnails/the-tasty-tour/regular/medium.jpg",
+				"large": "./assets/thumbnails/the-tasty-tour/regular/large.jpg"
+			}
+		},
+		"year": 2016,
+		"category": "TV Series",
+		"rating": "PG",
+		"isBookmarked": false,
+		"isTrending": false,
+		"description": "Savor the flavors of the world in 'The Tasty Tour,' a delectable TV series that takes viewers on a culinary adventure across continents. From street food to gourmet delights, the show explores the diverse and mouthwatering cuisines that define different cultures. With its tantalizing visuals and informative narratives, 'The Tasty Tour' is a feast for the senses that celebrates the universal joy of good food and the cultural significance of culinary traditions."
+	},
+	{
+		"title": "Darker",
+		"thumbnail": {
+			"regular": {
+				"small": "./assets/thumbnails/darker/regular/small.jpg",
+				"medium": "./assets/thumbnails/darker/regular/medium.jpg",
+				"large": "./assets/thumbnails/darker/regular/large.jpg"
+			}
+		},
+		"year": 2017,
+		"category": "Movie",
+		"rating": "18+",
+		"isBookmarked": true,
+		"isTrending": false,
+		"description": "Delve into the shadows with 'Darker,' an intense movie that explores the darker aspects of the human psyche. From psychological twists to moral complexities, the film navigates through a gripping narrative that challenges perceptions and raises thought-provoking questions. 'Darker' is a cinematic journey that invites viewers to confront the complexities of human nature and the gray areas that define morality."
+	},
+	{
+		"title": "Unresolved Cases",
+		"thumbnail": {
+			"regular": {
+				"small": "./assets/thumbnails/unresolved-cases/regular/small.jpg",
+				"medium": "./assets/thumbnails/unresolved-cases/regular/medium.jpg",
+				"large": "./assets/thumbnails/unresolved-cases/regular/large.jpg"
+			}
+		},
+		"year": 2018,
+		"category": "TV Series",
+		"rating": "18+",
+		"isBookmarked": false,
+		"isTrending": false,
+		"description": "Unravel the mysteries of 'Unresolved Cases,' a gripping TV series that delves into unsolved mysteries, cold cases, and the relentless pursuit of truth. With a combination of suspenseful storytelling and investigative drama, the show keeps viewers on the edge of their seats as it explores the complexities of criminal investigations. 'Unresolved Cases' is a thrilling ride that invites audiences to join the quest for justice and the closure of long-standing mysteries."
+	},
+	{
+		"title": "Mission: Saturn",
+		"thumbnail": {
+			"regular": {
+				"small": "./assets/thumbnails/mission-saturn/regular/small.jpg",
+				"medium": "./assets/thumbnails/mission-saturn/regular/medium.jpg",
+				"large": "./assets/thumbnails/mission-saturn/regular/large.jpg"
+			}
+		},
+		"year": 2017,
+		"category": "Movie",
+		"rating": "PG",
+		"isBookmarked": true,
+		"isTrending": false,
+		"description": "Embark on an interstellar adventure in 'Mission: Saturn,' an epic movie that transcends the boundaries of space and time. From futuristic spacecraft to distant planets, the film takes viewers on a journey beyond the stars as characters face cosmic challenges and unforeseen dangers. With its breathtaking visuals and a narrative that blends science fiction with human drama, 'Mission: Saturn' promises an immersive cinematic experience that explores the mysteries of the universe."
+	}
 ]

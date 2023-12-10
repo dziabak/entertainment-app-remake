@@ -18,8 +18,8 @@ MediaContentTileProps) => {
 	const niceUrl = makeNiceUrl(title);
 
 	return (
-		<Link to={`/${niceUrl}`}>
-			<div className="relative group">
+		<Link to={`/${niceUrl}`} className="group">
+			<div className="relative">
 				<img src={thumbnail.regular.small} alt="" className="rounded-lg" />
 				<MediaContentTilePlayHover />
 			</div>

@@ -10,9 +10,15 @@ type RootLayoutProps = {
 const RootLayout = ({ children }: RootLayoutProps) => {
 	return (
 		<main className="min-h-screen bg-c-black">
-			<Navigation />
-			<Outlet />
-			{children}
+			<div className="flex flex-col lg:flex-row">
+				<div>
+					<Navigation />
+				</div>
+				<div className="container">
+					<Outlet />
+					{children}
+				</div>
+			</div>
 		</main>
 	);
 };

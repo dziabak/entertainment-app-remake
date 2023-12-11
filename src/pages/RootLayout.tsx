@@ -1,5 +1,5 @@
 // BUILT-IN IMPORTS
-import { Outlet } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 // INTERNAL IMPORTS
 import Navigation from "../components/ui/Navigation";
 
@@ -10,6 +10,7 @@ type RootLayoutProps = {
 const RootLayout = ({ children }: RootLayoutProps) => {
 	return (
 		<main className="min-h-screen bg-c-black">
+			<Navigate to="/home" />
 			<div className="flex flex-col lg:flex-row">
 				<div>
 					<Navigation />

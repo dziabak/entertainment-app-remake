@@ -41,7 +41,12 @@ const DisplayMediaContent = ({
 	}
 
 	if (isError) {
-		utilityContent = <ErrorBlock errorHeader="We are sorry :(" errorMessage="We could not load your next favourite movie." />;
+		utilityContent = (
+			<ErrorBlock
+				errorHeader="We are sorry :("
+				errorMessage="We could not load your next favourite movie."
+			/>
+		);
 	}
 
 	if (data) {
@@ -82,7 +87,9 @@ const DisplayMediaContent = ({
 						Found {filteredData!.length} results for "{query}"
 					</p>
 				)}
-				<div className="flex items-center justify-center mt-64 lg:mt-96">{utilityContent}</div>
+				<div className="flex items-center justify-center mt-64 lg:mt-96">
+					{utilityContent}
+				</div>
 				<div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
 					{content}
 				</div>

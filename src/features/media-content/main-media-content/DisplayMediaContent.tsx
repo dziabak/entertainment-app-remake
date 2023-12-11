@@ -8,6 +8,8 @@ import { MediaContentData } from "../../../types/types";
 import MediaContentTile from "./MediaContentTile";
 import Searchbar from "../../search/Searchbar";
 import DisplayTrendingMediaContent from "../trending-media-content/DisplayTrendingMediaContent";
+import LoadingSpinner from "../../../components/ui/LoadingSpinner";
+import ErrorBlock from "../../../components/ui/ErrorBlock";
 
 type DisplayMediaContentProps = {
 	queryFunction: () => Promise<MediaContentData>;
@@ -26,6 +28,7 @@ const DisplayMediaContent = ({
 	};
 
 	let content!: JSX.Element | JSX.Element[];
+	let utilityContent!: JSX.Element;
 	let filteredData: MediaContentData;
 
 	const { data, isFetching, isError, isSuccess } = useQuery({
@@ -34,17 +37,19 @@ const DisplayMediaContent = ({
 	});
 
 	if (isFetching) {
-		content = <p>Fetching the data!</p>;
+		utilityContent = <LoadingSpinner />;
 	}
 
 	if (isError) {
-		content = <p>There was an error while fetching the data!</p>;
+		utilityContent = <ErrorBlock errorHeader="We are sorry :(" errorMessage="We could not load your next favourite movie." />;
 	}
 
 	if (data) {
 		filteredData = data.filter((item) => {
 			return item.title.toLowerCase().includes(query.toLowerCase());
 		});
+
+		// content = <LoadingSpinner />;
 
 		content = filteredData.map((item) => (
 			<MediaContentTile
@@ -61,13 +66,13 @@ const DisplayMediaContent = ({
 	}
 
 	return (
-		<section className="px-6">
+		<section className="px-6 lg:px-16">
 			{isSuccess && <Searchbar onSearch={getSearchValue} />}
 			{location.pathname === "/home" && isSuccess && query === "" ? (
 				<DisplayTrendingMediaContent />
 			) : undefined}
 			<div className="my-2 space-y-6">
-				{query === "" && (
+				{isSuccess && query === "" && (
 					<p className="text-xl font-thin tracking-tight font-main text-c-white">
 						{title}
 					</p>
@@ -77,6 +82,7 @@ const DisplayMediaContent = ({
 						Found {filteredData!.length} results for "{query}"
 					</p>
 				)}
+				<div className="flex items-center justify-center mt-64 lg:mt-96">{utilityContent}</div>
 				<div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
 					{content}
 				</div>

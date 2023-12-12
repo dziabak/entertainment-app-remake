@@ -13,8 +13,8 @@ const MediaContentDetailsView = ({
 	description,
 }: MediaContentTileProps) => {
 	return (
-		<section className="p-8 space-y-8 md:flex md:flex-row md:justify-center md:space-y-0 md:space-x-8">
-			<div className="space-y-4 md:w-1/2 lg:w-1/4">
+		<div className="p-8 space-y-8 lg:mt-16 lg:px-16 lg:max-w-prose">
+			<div>
 				<img src={thumbnail.regular.small} alt="" className="rounded-lg" />
 			</div>
 			<div className="space-y-4">
@@ -24,9 +24,11 @@ const MediaContentDetailsView = ({
 					title={title}
 					year={year}
 				/>
-				<p className="font-main text-c-white max-w-prose">{description}</p>
+				<p className="font-main font-thin text-c-white max-w-prose opacity-75">
+					{description}
+				</p>
 			</div>
-		</section>
+		</div>
 	);
 };
 

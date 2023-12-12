@@ -5,6 +5,8 @@ import { useQuery } from "@tanstack/react-query";
 // INTENRAL IMPORTS
 import { fetchMediaContentItem } from "../services/api/http";
 import MediaContentDetailsView from "../features/details-page/MediaContentDetailsView";
+import LoadingSpinner from "../components/ui/LoadingSpinner";
+import ErrorBlock from "../components/ui/ErrorBlock";
 // import { MediaContentTileProps } from "../types/types";
 
 const MediaContentDetails = () => {
@@ -16,13 +18,19 @@ const MediaContentDetails = () => {
 	});
 
 	let content!: JSX.Element | JSX.Element[];
+	let utilityContent!: JSX.Element;
 
 	if (isPending) {
-		content = <p>Fetching the data!</p>;
+		utilityContent = <LoadingSpinner />;
 	}
 
 	if (isError) {
-		content = <p>There was an error while fetching the data!</p>;
+		utilityContent = (
+			<ErrorBlock
+				errorHeader="We are sorry :("
+				errorMessage="We could not load your next favourite movie."
+			/>
+		);
 	}
 
 	if (data) {
@@ -42,9 +50,10 @@ const MediaContentDetails = () => {
 	}
 
 	return (
-		<>
+		<section>
+			{utilityContent}
 			{content}
-		</>
+		</section>
 	);
 };
 

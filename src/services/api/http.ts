@@ -7,7 +7,11 @@ import { makeNiceUrl } from "../../utils/make-nice-url";
 export const queryClient = new QueryClient();
 
 export const fetchAllMediaContentData = async () => {
-	const response = await fetch("../data.json");
+	// const response = await fetch("../data.json");
+	const response = await fetch(
+		"https://react-databases-6c0bd-default-rtdb.europe-west1.firebasedatabase.app/entertainment-app-remake.json",
+		{ method: "GET", headers: { "Content-Type": "application.json" } }
+	);
 
 	if (!response.ok) {
 		const error = new Error("Data could not be fetched!");
@@ -20,7 +24,11 @@ export const fetchAllMediaContentData = async () => {
 };
 
 export const fetchMoviesContentData = async () => {
-	const response = await fetch("../data.json");
+	// const response = await fetch("../data.json");
+	const response = await fetch(
+		"https://react-databases-6c0bd-default-rtdb.europe-west1.firebasedatabase.app/entertainment-app-remake.json",
+		{ method: "GET", headers: { "Content-Type": "application.json" } }
+	);
 
 	if (!response.ok) {
 		const error = new Error("Data could not be fetched!");
@@ -37,7 +45,11 @@ export const fetchMoviesContentData = async () => {
 };
 
 export const fetchSeriesContentData = async () => {
-	const response = await fetch("../data.json");
+	// const response = await fetch("../data.json");
+	const response = await fetch(
+		"https://react-databases-6c0bd-default-rtdb.europe-west1.firebasedatabase.app/entertainment-app-remake.json",
+		{ method: "GET", headers: { "Content-Type": "application.json" } }
+	);
 
 	if (!response.ok) {
 		const error = new Error("Data could not be fetched!");
@@ -54,7 +66,11 @@ export const fetchSeriesContentData = async () => {
 };
 
 export const fetchBookmarkedContentData = async () => {
-	const response = await fetch("../data.json");
+	// const response = await fetch("../data.json");
+	const response = await fetch(
+		"https://react-databases-6c0bd-default-rtdb.europe-west1.firebasedatabase.app/entertainment-app-remake.json",
+		{ method: "GET", headers: { "Content-Type": "application.json" } }
+	);
 
 	if (!response.ok) {
 		const error = new Error("Data could not be fetched!");
@@ -71,7 +87,11 @@ export const fetchBookmarkedContentData = async () => {
 };
 
 export const fetchTrendingContentData = async () => {
-	const response = await fetch("../data.json");
+	// const response = await fetch("../data.json");
+	const response = await fetch(
+		"https://react-databases-6c0bd-default-rtdb.europe-west1.firebasedatabase.app/entertainment-app-remake.json",
+		{ method: "GET", headers: { "Content-Type": "application.json" } }
+	);
 
 	if (!response.ok) {
 		const error = new Error("Data could not be fetched!");
@@ -92,7 +112,11 @@ export const fetchMediaContentItem = async ({
 }: {
 	id: string | undefined;
 }) => {
-	const response = await fetch("../data.json");
+	// const response = await fetch("../data.json");
+	const response = await fetch(
+		"https://react-databases-6c0bd-default-rtdb.europe-west1.firebasedatabase.app/entertainment-app-remake.json",
+		{ method: "GET", headers: { "Content-Type": "application.json" } }
+	);
 
 	if (!response.ok) {
 		const error = new Error("Data could not be fetched!");

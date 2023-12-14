@@ -1,10 +1,16 @@
 // BUILT-IN IMPORTS
+import { useState } from "react";
 import { Link } from "react-router-dom";
+// EXTERNAL IMPORTS
+import { useMutation, useQuery } from "@tanstack/react-query";
 //INTERNAL IMPORTS
 import { MediaContentTileProps } from "../../../types/types";
 import MediaContentTileLabels from "../reusable-media-content/MediaContentTileLabels";
 import MediaContentTilePlayHover from "../reusable-media-content/MediaContentTilePlayHover";
 import { makeNiceUrl } from "../../../utils/make-nice-url";
+import { updateBookmark } from "../../../services/api/http";
+import { queryClient } from "../../../services/api/http";
+import { fetchAllMediaContentData } from "../../../services/api/http";
 
 const MediaContentTile = ({
 	title,
@@ -17,24 +23,61 @@ const MediaContentTile = ({
 MediaContentTileProps) => {
 	const niceUrl = makeNiceUrl(title);
 
+	useQuery({
+		queryKey: ["allMediaContent"],
+		queryFn: fetchAllMediaContentData,
+	});
+
+	const { mutate } = useMutation({
+		mutationFn: updateBookmark,
+		// onSuccess: (data) => {
+		// 	queryClient.invalidateQueries();
+		// 	console.log(data);
+		// },
+	});
+
+	const [isBookmarkedState, setIsBookmarkedState] = useState(isBookmarked);
+
+	const bookmarkStateChangeHandler = () => {
+		setIsBookmarkedState((prevIsBookmarkedState) => !prevIsBookmarkedState);
+
+		const queryMediaContent: { title: string }[] | undefined =
+			queryClient.getQueryData(["allMediaContent"]);
+
+		const queryIndex = queryMediaContent?.findIndex(
+			(item) => item.title === title
+		);
+
+		const queryObject = queryMediaContent?.find((item) => item.title === title);
+
+		const updatedData = { ...queryObject, isBookmarked: !isBookmarkedState };
+
+		mutate({ id: queryIndex, updatedData: updatedData });
+	};
+
 	return (
-		<Link to={`/${niceUrl}`} className="group">
-			<div className="relative">
-				<img src={thumbnail.regular.small} alt="" className="rounded-lg" />
-				<MediaContentTilePlayHover />
-			</div>
-			<MediaContentTileLabels
-				title={title}
-				year={year}
-				category={category}
-				rating={rating}
-			/>
-			<div className="font-thin font-main text-c-light-blue">
-				{isBookmarked && <p>isBookmarked</p>}
-				{/* {isTrending && <p>isTrending</p>} */}
-			</div>
-			{/* <Link to={`/${title}`}>LINK</Link> */}
-		</Link>
+		<div className="font-thin font-main text-c-light-blue">
+			<Link to={`/${niceUrl}`} className="group">
+				<div className="relative">
+					<img src={thumbnail.regular.small} alt="" className="rounded-lg" />
+					<MediaContentTilePlayHover />
+				</div>
+				<MediaContentTileLabels
+					title={title}
+					year={year}
+					category={category}
+					rating={rating}
+				/>
+				<div className="font-thin font-main text-c-light-blue">
+					{/* {isTrending && <p>isTrending</p>} */}
+				</div>
+				{/* <Link to={`/${title}`}>LINK</Link> */}
+			</Link>
+			{/* {isBookmarkedState && <p>isBookmarked</p>} */}
+			<button onClick={bookmarkStateChangeHandler}>
+				{isBookmarkedState ? "YES" : "NO"}
+			</button>
+		</div>
 	);
 };
 

@@ -1,3 +1,5 @@
+//EXTERNAL IMPORTS
+import { useDocumentTitle } from "usehooks-ts";
 // INTERNAL IMPORTS
 import { MediaContentTileProps } from "../../types/types";
 import MediaContentTileLabels from "../media-content/reusable-media-content/MediaContentTileLabels";
@@ -12,6 +14,8 @@ const MediaContentDetailsView = ({
 	year,
 	description,
 }: MediaContentTileProps) => {
+	useDocumentTitle(`${title} | Entertainment App`);
+
 	return (
 		<div className="p-8 space-y-8 lg:mt-16 lg:px-16 lg:max-w-prose">
 			<div>
@@ -24,7 +28,7 @@ const MediaContentDetailsView = ({
 					title={title}
 					year={year}
 				/>
-				<p className="font-main font-thin text-c-white max-w-prose opacity-75">
+				<p className="font-thin opacity-75 font-main text-c-white max-w-prose">
 					{description}
 				</p>
 			</div>

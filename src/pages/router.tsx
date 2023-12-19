@@ -1,6 +1,6 @@
-// BUILT_IN IMPORTS
+// BUILT-IN IMPORTS
 import { createBrowserRouter } from "react-router-dom";
-// EXTERNAL IMPORTS
+// INTERNAL IMPORTS
 import RootLayout from "./RootLayout";
 import ErrorPage from "./ErrorPage";
 import Home from "./Home";

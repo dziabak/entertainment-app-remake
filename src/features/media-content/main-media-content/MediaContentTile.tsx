@@ -5,12 +5,13 @@ import { Link } from "react-router-dom";
 import { useMutation, useQuery } from "@tanstack/react-query";
 //INTERNAL IMPORTS
 import { MediaContentTileProps } from "../../../types/types";
-import MediaContentTileLabels from "../reusable-media-content/MediaContentTileLabels";
-import MediaContentTilePlayHover from "../reusable-media-content/MediaContentTilePlayHover";
-import { makeNiceUrl } from "../../../utils/make-nice-url";
-import { updateBookmark } from "../../../services/api/http";
 import { queryClient } from "../../../services/api/http";
 import { fetchAllMediaContentData } from "../../../services/api/http";
+import { updateBookmark } from "../../../services/api/http";
+import { makeNiceUrl } from "../../../utils/make-nice-url";
+import MediaContentTileLabels from "../reusable-media-content/MediaContentTileLabels";
+import MediaContentTilePlayHover from "../reusable-media-content/MediaContentTilePlayHover";
+import BookmarkButton from "../reusable-media-content/BookmarkButton";
 
 const MediaContentTile = ({
 	title,
@@ -56,7 +57,7 @@ MediaContentTileProps) => {
 	};
 
 	return (
-		<div className="font-thin font-main text-c-light-blue">
+		<div className="relative font-thin font-main text-c-light-blue">
 			<Link to={`/${niceUrl}`} className="group">
 				<div className="relative">
 					<img src={thumbnail.regular.small} alt="" className="rounded-lg" />
@@ -68,15 +69,11 @@ MediaContentTileProps) => {
 					category={category}
 					rating={rating}
 				/>
-				<div className="font-thin font-main text-c-light-blue">
-					{/* {isTrending && <p>isTrending</p>} */}
-				</div>
-				{/* <Link to={`/${title}`}>LINK</Link> */}
 			</Link>
-			{/* {isBookmarkedState && <p>isBookmarked</p>} */}
-			<button onClick={bookmarkStateChangeHandler}>
-				{isBookmarkedState ? "YES" : "NO"}
-			</button>
+			<BookmarkButton
+				isBookmarked={isBookmarkedState}
+				onClick={bookmarkStateChangeHandler}
+			/>
 		</div>
 	);
 };

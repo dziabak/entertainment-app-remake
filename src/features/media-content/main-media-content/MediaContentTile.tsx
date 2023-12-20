@@ -11,6 +11,7 @@ import { updateBookmark } from "../../../services/api/http";
 import { makeNiceUrl } from "../../../utils/make-nice-url";
 import MediaContentTileLabels from "../reusable-media-content/MediaContentTileLabels";
 import MediaContentTilePlayHover from "../reusable-media-content/MediaContentTilePlayHover";
+import MediaContentTileImage from "../reusable-media-content/MediaContentTileImage";
 import BookmarkButton from "../reusable-media-content/BookmarkButton";
 
 const MediaContentTile = ({
@@ -78,7 +79,11 @@ MediaContentTileProps) => {
 		<div className="relative font-thin font-main text-c-light-blue">
 			<Link to={`/${niceUrl}`} className="group">
 				<div className="relative">
-					<img src={thumbnail.regular.small} alt="" className="rounded-lg" />
+					<MediaContentTileImage
+						thumbnailMobile={thumbnail.regular.small}
+						thumbnailTablet={thumbnail.regular.medium}
+						thumbnailDesktop={thumbnail.regular.large}
+					/>
 					<MediaContentTilePlayHover />
 				</div>
 				<MediaContentTileLabels

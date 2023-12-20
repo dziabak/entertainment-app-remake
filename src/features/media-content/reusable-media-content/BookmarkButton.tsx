@@ -9,7 +9,7 @@ const BookmarkButton = ({ isBookmarked, onClick }: BookmarkButtonProps) => {
 			<div className=""></div>
 			<button
 				onClick={onClick}
-				className="w-full h-full p-3 rounded-full bg-black/40">
+				className="flex items-center justify-center w-10 h-10 p-3 rounded-full bg-black/40">
 				{isBookmarked ? (
 					<svg width="12" height="14" xmlns="http://www.w3.org/2000/svg">
 						<path

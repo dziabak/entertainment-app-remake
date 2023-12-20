@@ -78,7 +78,8 @@ const Navigation = () => {
 				<img
 					src="../../assets/image-avatar.png"
 					alt=""
-					className="w-10 transition-colors border-2 rounded-full cursor-pointer hover:border-c-red"
+					// className="w-10 transition-colors border-2 rounded-full cursor-pointer hover:border-c-red"
+					className="w-10 border-2 rounded-full"
 				/>
 			</div>
 		</nav>

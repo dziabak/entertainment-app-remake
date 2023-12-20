@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // EXTERNAL IMPORTS
 import { useMutation, useQuery } from "@tanstack/react-query";
 //INTERNAL IMPORTS
-import { MediaContentTileProps } from "../../../types/types";
+import { MediaContentData, MediaContentTileProps } from "../../../types/types";
 import { queryClient } from "../../../services/api/http";
 import { fetchAllMediaContentData } from "../../../services/api/http";
 import { updateBookmark } from "../../../services/api/http";
@@ -31,10 +31,28 @@ MediaContentTileProps) => {
 
 	const { mutate } = useMutation({
 		mutationFn: updateBookmark,
-		// onSuccess: (data) => {
-		// 	queryClient.invalidateQueries();
-		// 	console.log(data);
-		// },
+		onSuccess: (data) => {
+			queryClient.setQueryData(
+				["mediaContent"],
+				(oldData: MediaContentData) => {
+					if (!oldData) return oldData;
+					const itemIndex = oldData.findIndex(
+						(item) => item.title === data.title
+					);
+
+					if (itemIndex === -1) return oldData;
+
+					const updatedData = [...oldData];
+
+					updatedData[itemIndex] = {
+						...oldData[itemIndex],
+						isBookmarked: data.isBookmarked,
+					};
+
+					return updatedData;
+				}
+			);
+		},
 	});
 
 	const [isBookmarkedState, setIsBookmarkedState] = useState(isBookmarked);
@@ -71,7 +89,7 @@ MediaContentTileProps) => {
 				/>
 			</Link>
 			<BookmarkButton
-				isBookmarked={isBookmarkedState}
+				isBookmarked={isBookmarked}
 				onClick={bookmarkStateChangeHandler}
 			/>
 		</div>

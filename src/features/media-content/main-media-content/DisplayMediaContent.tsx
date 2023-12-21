@@ -82,6 +82,11 @@ const DisplayMediaContent = ({
 						{title}
 					</p>
 				)}
+				{query !== "" && filteredData!.length === 1 && (
+					<p className="text-xl font-thin tracking-tight font-main text-c-white">
+						Found {filteredData!.length} result for "{query}"
+					</p>
+				)}
 				{query !== "" && (
 					<p className="text-xl font-thin tracking-tight font-main text-c-white">
 						Found {filteredData!.length} results for "{query}"

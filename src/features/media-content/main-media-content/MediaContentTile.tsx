@@ -21,6 +21,7 @@ const MediaContentTile = ({
 	category,
 	rating,
 	isBookmarked,
+	mutateQueryKey,
 }: // isTrending,
 MediaContentTileProps) => {
 	const niceUrl = makeNiceUrl(title);
@@ -34,7 +35,7 @@ MediaContentTileProps) => {
 		mutationFn: updateBookmark,
 		onSuccess: (data) => {
 			queryClient.setQueryData(
-				["mediaContent"],
+				mutateQueryKey!,
 				(oldData: MediaContentData) => {
 					if (!oldData) return oldData;
 					const itemIndex = oldData.findIndex(

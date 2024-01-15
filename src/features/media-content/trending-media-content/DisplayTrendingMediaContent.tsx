@@ -36,7 +36,7 @@ const DisplayTrendingMediaContent = () => {
 	}
 
 	return (
-		<div className="my-8 space-y-8">
+		<div className="mb-16 space-y-2">
 			{isSuccess && (
 				<p className="text-xl font-thin tracking-tight font-main text-c-white">
 					Trending

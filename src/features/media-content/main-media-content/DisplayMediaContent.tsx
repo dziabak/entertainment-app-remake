@@ -1,39 +1,31 @@
-// BUILT-IN IMPORTS
-import { useState } from "react";
-import { useLocation } from "react-router-dom";
 // EXTERNAL IMPORTS
 import { useQuery } from "@tanstack/react-query";
 //INTERNAL IMPORT
 import { MediaContentData } from "../../../types/types";
 import MediaContentTile from "./MediaContentTile";
 import MediaContentHeader from "./MediaContentHeader";
-import Searchbar from "../../search/Searchbar";
-import DisplayTrendingMediaContent from "../trending-media-content/DisplayTrendingMediaContent";
 import LoadingSpinner from "../../../components/ui/LoadingSpinner";
 import ErrorBlock from "../../../components/ui/ErrorBlock";
 
 type DisplayMediaContentProps = {
 	queryFunction: () => Promise<MediaContentData>;
 	title: string;
+	query: string;
+	queryKey: string[];
 };
 
 const DisplayMediaContent = ({
 	queryFunction,
 	title,
+	query,
+	queryKey,
 }: DisplayMediaContentProps) => {
-	const [query, setQuery] = useState("");
-	const location = useLocation();
-
-	const getSearchValue = (searchValue: string) => {
-		setQuery(searchValue);
-	};
-
 	let content!: JSX.Element | JSX.Element[];
 	let utilityContent!: JSX.Element;
 	let filteredData: MediaContentData;
 
 	const { data, isFetching, isError, isSuccess } = useQuery({
-		queryKey: ["mediaContent"],
+		queryKey: queryKey,
 		queryFn: queryFunction,
 	});
 
@@ -65,17 +57,13 @@ const DisplayMediaContent = ({
 				thumbnail={item.thumbnail}
 				title={item.title}
 				year={item.year}
+				mutateQueryKey={queryKey}
 			/>
 		));
 	}
 
 	return (
-		<section className="px-6 lg:px-16">
-			{isSuccess && <Searchbar onSearch={getSearchValue} />}
-			{location.pathname === "/home" && !isFetching && query === "" && (
-				<DisplayTrendingMediaContent />
-			)}
-			<div className="my-2 space-y-6">
+			<div className="my-2 mb-12 space-y-2">
 				<MediaContentHeader
 					filteredData={filteredData!}
 					isSuccess={isSuccess}
@@ -86,12 +74,11 @@ const DisplayMediaContent = ({
 					{utilityContent}
 				</div>
 				{!isFetching && (
-					<div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
+					<div className="grid grid-cols-2 gap-6 md:grid-cols-3 xl:grid-cols-4">
 						{content}
 					</div>
 				)}
 			</div>
-		</section>
 	);
 };
 

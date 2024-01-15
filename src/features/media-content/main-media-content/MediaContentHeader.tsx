@@ -13,21 +13,23 @@ const MediaContentHeader = ({
 }) => {
 	let queryText: JSX.Element;
 
+	const cn = "text-xl font-thin tracking-tight font-main text-c-white"
+
 	if (isSuccess && query === "") {
 		queryText = (
-			<p className="text-xl font-thin tracking-tight font-main text-c-white">
+			<p className={cn}>
 				{title}
 			</p>
 		);
 	} else if (query !== "") {
 		queryText = (
-			<p className="text-xl font-thin tracking-tight font-main text-c-white">
+			<p className={cn}>
 				Found {filteredData!.length} results for "{query}"
 			</p>
 		);
 	} else if (query !== "" && filteredData!.length === 1) {
 		queryText = (
-			<p className="text-xl font-thin tracking-tight font-main text-c-white">
+			<p className={cn}>
 				Found {filteredData!.length} result for "{query}"
 			</p>
 		);

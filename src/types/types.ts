@@ -10,6 +10,7 @@ export type MediaContentData = {
 	isBookmarked: boolean;
 	isTrending: boolean;
 	description?: string;
+	mutateQueryKey?: string[];
 }[];
 
 export type MediaContentTileProps = MediaContentData[number];

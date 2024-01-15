@@ -1,6 +1,6 @@
 // BUILT-IN IMPORTS
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 // EXTERNAL IMPORTS
 import { useMutation, useQuery } from "@tanstack/react-query";
 //INTERNAL IMPORTS
@@ -25,6 +25,7 @@ const MediaContentTile = ({
 }: // isTrending,
 MediaContentTileProps) => {
 	const niceUrl = makeNiceUrl(title);
+	const location = useLocation();
 
 	useQuery({
 		queryKey: ["allMediaContent"],
@@ -34,26 +35,23 @@ MediaContentTileProps) => {
 	const { mutate } = useMutation({
 		mutationFn: updateBookmark,
 		onSuccess: (data) => {
-			queryClient.setQueryData(
-				mutateQueryKey!,
-				(oldData: MediaContentData) => {
-					if (!oldData) return oldData;
-					const itemIndex = oldData.findIndex(
-						(item) => item.title === data.title
-					);
+			queryClient.setQueryData(mutateQueryKey!, (oldData: MediaContentData) => {
+				if (!oldData) return oldData;
+				const itemIndex = oldData.findIndex(
+					(item) => item.title === data.title
+				);
 
-					if (itemIndex === -1) return oldData;
+				if (itemIndex === -1) return oldData;
 
-					const updatedData = [...oldData];
+				const updatedData = [...oldData];
 
-					updatedData[itemIndex] = {
-						...oldData[itemIndex],
-						isBookmarked: data.isBookmarked,
-					};
+				updatedData[itemIndex] = {
+					...oldData[itemIndex],
+					isBookmarked: data.isBookmarked,
+				};
 
-					return updatedData;
-				}
-			);
+				return updatedData;
+			});
 		},
 	});
 
@@ -78,7 +76,7 @@ MediaContentTileProps) => {
 
 	return (
 		<div className="relative font-thin font-main text-c-light-blue">
-			<Link to={`/${niceUrl}`} className="group">
+			<Link to={`${location.pathname}/${niceUrl}`} className="group">
 				<div className="relative">
 					<MediaContentTileImage
 						thumbnailMobile={thumbnail.regular.small}

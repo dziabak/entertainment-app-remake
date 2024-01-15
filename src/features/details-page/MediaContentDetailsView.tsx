@@ -2,6 +2,7 @@
 import { useDocumentTitle } from "usehooks-ts";
 // INTERNAL IMPORTS
 import { MediaContentTileProps } from "../../types/types";
+import MediaContentTileImage from "../media-content/reusable-media-content/MediaContentTileImage";
 import MediaContentTileLabels from "../media-content/reusable-media-content/MediaContentTileLabels";
 
 const MediaContentDetailsView = ({
@@ -19,7 +20,11 @@ const MediaContentDetailsView = ({
 	return (
 		<div className="p-8 space-y-8 lg:mt-16 lg:px-16 lg:max-w-prose">
 			<div>
-				<img src={thumbnail.regular.small} alt="" className="rounded-lg" />
+				<MediaContentTileImage
+					thumbnailMobile={thumbnail.regular.small}
+					thumbnailTablet={thumbnail.regular.medium}
+					thumbnailDesktop={thumbnail.regular.large}
+				/>
 			</div>
 			<div className="space-y-4">
 				<MediaContentTileLabels

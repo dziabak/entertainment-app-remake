@@ -40,6 +40,10 @@ export const router = createBrowserRouter([
 				element: <Bookmarked />,
 			},
 			{ path: "/:mediaContentId", element: <MediaContentDetails /> },
+			{ path: "/home/:mediaContentId", element: <MediaContentDetails /> },
+			{ path: "/movies/:mediaContentId", element: <MediaContentDetails /> },
+			{ path: "/series/:mediaContentId", element: <MediaContentDetails /> },
+			{ path: "/bookmarked/:mediaContentId", element: <MediaContentDetails /> },
 		],
 	},
 ]);

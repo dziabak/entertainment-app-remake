@@ -1,3 +1,5 @@
+//BUILT-IN IMPORTS
+import { Outlet } from "react-router-dom";
 //EXTERNAL IMPORTS
 import { useDocumentTitle } from "usehooks-ts";
 //INTERNAL IMPORTS
@@ -12,6 +14,7 @@ const Series = () => {
 
 	return (
 		<>
+			<Outlet />
 			<Searchbar onSearch={getSearchValue} />
 			<DisplayMediaContent
 				title="TV Series"

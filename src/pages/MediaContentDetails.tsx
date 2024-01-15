@@ -1,13 +1,12 @@
-// BUILT-IN IMPORTS
+//BUILT-IN IMPORTS
 import { useParams } from "react-router-dom";
-// EXTERNAL IMPORTS
+//EXTERNAL IMPORTS
 import { useQuery } from "@tanstack/react-query";
-// INTENRAL IMPORTS
+//INTENRAL IMPORTS
 import { fetchMediaContentItem } from "../services/api/http";
 import MediaContentDetailsView from "../features/details-page/MediaContentDetailsView";
 import LoadingSpinner from "../components/ui/LoadingSpinner";
 import ErrorBlock from "../components/ui/ErrorBlock";
-// import { MediaContentTileProps } from "../types/types";
 
 const MediaContentDetails = () => {
 	const params = useParams();
@@ -50,9 +49,11 @@ const MediaContentDetails = () => {
 	}
 
 	return (
-		<section>
-			{utilityContent}
-			{content}
+		<section className="fixed top-0 left-0 z-10 w-full h-full cursor-pointer bg-c-dark-blue/50">
+			<div className="flex items-center justify-center w-full h-full">
+				{utilityContent}
+				{content}
+			</div>
 		</section>
 	);
 };

@@ -1,3 +1,5 @@
+//BUILT-IN IMPORTS
+import { Outlet } from "react-router-dom";
 //EXTERNAL IMPORTS
 import { useDocumentTitle } from "usehooks-ts";
 //INTERNAL IMPORTS
@@ -8,7 +10,6 @@ import {
 	fetchBookmarkedSeriesData,
 } from "../services/api/http";
 import DisplayMediaContent from "../features/media-content/main-media-content/DisplayMediaContent";
-
 import Searchbar from "../features/search/Searchbar";
 
 const Bookmarked = () => {
@@ -17,6 +18,7 @@ const Bookmarked = () => {
 
 	return (
 		<>
+			<Outlet />
 			<Searchbar onSearch={getSearchValue} />
 			{query === "" && (
 				<>

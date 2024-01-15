@@ -1,7 +1,8 @@
+//BUILT-IN IMPORTS
+import { Outlet } from "react-router-dom";
 //EXTERNAL IMPORTS
 import { useDocumentTitle } from "usehooks-ts";
 //INTERNAL IMPORTS
-import { Outlet } from "react-router-dom";
 import { fetchAllMediaContentData } from "../services/api/http";
 import DisplayMediaContent from "../features/media-content/main-media-content/DisplayMediaContent";
 import DisplayTrendingMediaContent from "../features/media-content/trending-media-content/DisplayTrendingMediaContent";

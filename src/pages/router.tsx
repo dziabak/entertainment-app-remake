@@ -26,24 +26,34 @@ export const router = createBrowserRouter([
 			{
 				path: "/home",
 				element: <Home />,
+				children: [
+					{ path: "/home/:mediaContentId", element: <MediaContentDetails /> },
+				],
 			},
 			{
 				path: "/movies",
 				element: <Movies />,
+				children: [
+					{ path: "/movies/:mediaContentId", element: <MediaContentDetails /> },
+				],
 			},
 			{
 				path: "/series",
 				element: <Series />,
+				children: [
+					{ path: "/series/:mediaContentId", element: <MediaContentDetails /> },
+				],
 			},
 			{
 				path: "/bookmarked",
 				element: <Bookmarked />,
+				children: [
+					{
+						path: "/bookmarked/:mediaContentId",
+						element: <MediaContentDetails />,
+					},
+				],
 			},
-			{ path: "/:mediaContentId", element: <MediaContentDetails /> },
-			{ path: "/home/:mediaContentId", element: <MediaContentDetails /> },
-			{ path: "/movies/:mediaContentId", element: <MediaContentDetails /> },
-			{ path: "/series/:mediaContentId", element: <MediaContentDetails /> },
-			{ path: "/bookmarked/:mediaContentId", element: <MediaContentDetails /> },
 		],
 	},
 ]);

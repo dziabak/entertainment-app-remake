@@ -7,7 +7,7 @@ import TrendingMediaContentTile from "./TrendingMediaContentTile";
 const DisplayTrendingMediaContent = () => {
 	let content!: JSX.Element | JSX.Element[];
 
-	const { data, isFetching, isError } = useQuery({
+	const { data, isFetching, isError, isSuccess } = useQuery({
 		queryKey: ["trendingMediaContent"],
 		queryFn: fetchTrendingContentData,
 	});
@@ -36,8 +36,15 @@ const DisplayTrendingMediaContent = () => {
 	}
 
 	return (
-		<div className="grid grid-flow-col gap-4 mt-0 mb-6 overflow-x-auto overscroll-x-contain auto-cols-max snap-x snap-mandatory no-scrollbar">
-			{content}
+		<div className="my-8 space-y-8">
+			{isSuccess && (
+				<p className="text-xl font-thin tracking-tight font-main text-c-white">
+					Trending
+				</p>
+			)}
+			<div className="grid grid-flow-col gap-4 mt-0 mb-6 overflow-x-auto overscroll-x-contain auto-cols-max snap-x snap-mandatory no-scrollbar">
+				{content}
+			</div>
 		</div>
 	);
 };

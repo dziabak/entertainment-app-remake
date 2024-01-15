@@ -6,6 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 //INTERNAL IMPORT
 import { MediaContentData } from "../../../types/types";
 import MediaContentTile from "./MediaContentTile";
+import MediaContentHeader from "./MediaContentHeader";
 import Searchbar from "../../search/Searchbar";
 import DisplayTrendingMediaContent from "../trending-media-content/DisplayTrendingMediaContent";
 import LoadingSpinner from "../../../components/ui/LoadingSpinner";
@@ -54,8 +55,6 @@ const DisplayMediaContent = ({
 			return item.title.toLowerCase().includes(query.toLowerCase());
 		});
 
-		// content = <LoadingSpinner />;
-
 		content = filteredData.map((item) => (
 			<MediaContentTile
 				key={item.title}
@@ -73,31 +72,24 @@ const DisplayMediaContent = ({
 	return (
 		<section className="px-6 lg:px-16">
 			{isSuccess && <Searchbar onSearch={getSearchValue} />}
-			{location.pathname === "/home" && isSuccess && query === "" ? (
+			{location.pathname === "/home" && !isFetching && query === "" && (
 				<DisplayTrendingMediaContent />
-			) : undefined}
+			)}
 			<div className="my-2 space-y-6">
-				{isSuccess && query === "" && (
-					<p className="text-xl font-thin tracking-tight font-main text-c-white">
-						{title}
-					</p>
-				)}
-				{query !== "" && filteredData!.length === 1 && (
-					<p className="text-xl font-thin tracking-tight font-main text-c-white">
-						Found {filteredData!.length} result for "{query}"
-					</p>
-				)}
-				{query !== "" && (
-					<p className="text-xl font-thin tracking-tight font-main text-c-white">
-						Found {filteredData!.length} results for "{query}"
-					</p>
-				)}
+				<MediaContentHeader
+					filteredData={filteredData!}
+					isSuccess={isSuccess}
+					query={query}
+					title={title}
+				/>
 				<div className="flex items-center justify-center mt-64 lg:mt-96">
 					{utilityContent}
 				</div>
-				<div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
-					{content}
-				</div>
+				{!isFetching && (
+					<div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
+						{content}
+					</div>
+				)}
 			</div>
 		</section>
 	);

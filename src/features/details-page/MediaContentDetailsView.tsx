@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { useDocumentTitle, useOnClickOutside } from "usehooks-ts";
 //INTERNAL IMPORTS
 import { MediaContentTileProps } from "../../types/types";
-import MediaContentTileImage from "../media-content/reusable-media-content/MediaContentTileImage";
-import MediaContentTileLabels from "../media-content/reusable-media-content/MediaContentTileLabels";
+import MediaContentTileImage from "../media-content/media-content-tile/MediaContentTileImage";
+import MediaContentTileLabels from "../media-content/media-content-tile/MediaContentTileLabels";
 
 const MediaContentDetailsView = ({
 	title,

@@ -9,10 +9,10 @@ import { queryClient } from "../../../services/api/http";
 import { fetchAllMediaContentData } from "../../../services/api/http";
 import { updateBookmark } from "../../../services/api/http";
 import { makeNiceUrl } from "../../../utils/make-nice-url";
-import MediaContentTileLabelsRenderer from "../reusable-media-content/MediaContentTileLabelsRenderer";
-import MediaContentTilePlayHover from "../reusable-media-content/MediaContentTilePlayHover";
-import MediaContentTileImage from "../reusable-media-content/MediaContentTileImage";
-import BookmarkButton from "../reusable-media-content/BookmarkButton";
+import MediaContentTileLabelsRenderer from "./MediaContentTileLabelsRenderer";
+import MediaContentTilePlayHover from "./MediaContentTilePlayHover";
+import MediaContentTileImage from "./MediaContentTileImage";
+import BookmarkButton from "./BookmarkButton";
 
 const MediaContentTile = ({
 	title,

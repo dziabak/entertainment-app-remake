@@ -6,7 +6,7 @@ import { useDocumentTitle } from "usehooks-ts";
 import useSearch from "../hooks/use-search";
 import { fetchSeriesContentData } from "../services/api/http";
 import Searchbar from "../features/search/Searchbar";
-import DisplayMediaContent from "../features/media-content/main-media-content/DisplayMediaContent";
+import DisplayMediaContent from "../features/media-content/display-media-content/DisplayMediaContent";
 
 const Series = () => {
 	useDocumentTitle("TV Series | Entertainment App");

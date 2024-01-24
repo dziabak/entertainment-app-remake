@@ -2,11 +2,11 @@
 import { useQuery } from "@tanstack/react-query";
 //INTERNAL IMPORT
 import { MediaContentData } from "../../../types/types";
-import MediaContentTile from "./MediaContentTile";
+import MediaContentTile from "../media-content-tile/MediaContentTile";
 import MediaContentHeader from "./MediaContentHeader";
 import LoadingSpinner from "../../../components/ui/LoadingSpinner";
 import ErrorBlock from "../../../components/ui/ErrorBlock";
-import TrendingCarousel from "../trending-media-content/TrendingCarousel";
+import TrendingCarousel from "./TrendingCarousel";
 import MediaGrid from "./MediaGrid";
 
 type DisplayMediaContentProps = {
@@ -14,7 +14,7 @@ type DisplayMediaContentProps = {
 	title: string;
 	query: string;
 	queryKey: string[];
-	displayType: "trending" | "standard"
+	displayType: "trending" | "standard";
 };
 
 const DisplayMediaContent = ({
@@ -78,8 +78,12 @@ const DisplayMediaContent = ({
 			<div className="flex items-center justify-center mt-64 lg:mt-96">
 				{utilityContent}
 			</div>
-			{!isFetching && displayType === "standard" && <MediaGrid content={content} />}
-			{!isFetching && displayType === "trending" && <TrendingCarousel content={content} />}
+			{!isFetching && displayType === "standard" && (
+				<MediaGrid content={content} />
+			)}
+			{!isFetching && displayType === "trending" && (
+				<TrendingCarousel content={content} />
+			)}
 		</div>
 	);
 };

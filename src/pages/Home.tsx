@@ -7,7 +7,7 @@ import {
 	fetchAllMediaContentData,
 	fetchTrendingContentData,
 } from "../services/api/http";
-import DisplayMediaContent from "../features/media-content/main-media-content/DisplayMediaContent";
+import DisplayMediaContent from "../features/media-content/display-media-content/DisplayMediaContent";
 
 import Searchbar from "../features/search/Searchbar";
 import useSearch from "../hooks/use-search";

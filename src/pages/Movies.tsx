@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 //EXTERNAL IMPORTS
 import { useDocumentTitle } from "usehooks-ts";
 //INTERNAL IMPORTS
-import useSearch from "../hooks/use-search";
+import useSearch from "../hooks/useSearch";
 import { fetchMoviesContentData } from "../services/api/http";
 import Searchbar from "../features/search/Searchbar";
 import DisplayMediaContent from "../features/media-content/display-media-content/DisplayMediaContent";

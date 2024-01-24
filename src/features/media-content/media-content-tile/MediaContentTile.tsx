@@ -1,6 +1,6 @@
 // BUILT-IN IMPORTS
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 // EXTERNAL IMPORTS
 import { useMutation, useQuery } from "@tanstack/react-query";
 // INTERNAL IMPORTS
@@ -8,11 +8,11 @@ import { MediaContentData, MediaContentTileProps } from "../../../types/types";
 import { queryClient } from "../../../services/api/http";
 import { fetchAllMediaContentData } from "../../../services/api/http";
 import { updateBookmark } from "../../../services/api/http";
-import { makeNiceUrl } from "../../../utils/make-nice-url";
 import MediaContentTileLabelsRenderer from "./MediaContentTileLabelsRenderer";
 import MediaContentTilePlayHover from "./MediaContentTilePlayHover";
 import MediaContentTileImage from "./MediaContentTileImage";
 import BookmarkButton from "./BookmarkButton";
+import useLinkTo from "../../../hooks/useLinkTo";
 
 const MediaContentTile = ({
 	title,
@@ -24,8 +24,7 @@ const MediaContentTile = ({
 	mutateQueryKey,
 	displayType,
 }: MediaContentTileProps) => {
-	const niceUrl = makeNiceUrl(title);
-	const location = useLocation();
+	const linkTo = useLinkTo(title);
 
 	useQuery({
 		queryKey: ["allMediaContent"],
@@ -76,7 +75,7 @@ const MediaContentTile = ({
 
 	return (
 		<div className="relative font-thin font-main text-c-light-blue">
-			<Link to={`${location.pathname}/${niceUrl}`} className="group">
+			<Link to={linkTo} className="group">
 				<div className="relative">
 					<MediaContentTileImage
 						thumbnailMobile={thumbnail.regular.small}

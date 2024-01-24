@@ -10,7 +10,7 @@ import {
 import DisplayMediaContent from "../features/media-content/display-media-content/DisplayMediaContent";
 
 import Searchbar from "../features/search/Searchbar";
-import useSearch from "../hooks/use-search";
+import useSearch from "../hooks/useSearch";
 
 const Home = () => {
 	useDocumentTitle("Home | Entertainment App");

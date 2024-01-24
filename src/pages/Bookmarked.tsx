@@ -27,12 +27,14 @@ const Bookmarked = () => {
 						queryFunction={fetchBookmarkedMoviesData}
 						query={query}
 						queryKey={["movies"]}
+						displayType="standard"
 					/>
 					<DisplayMediaContent
 						title="Bookmarked TV Series"
 						queryFunction={fetchBookmarkedSeriesData}
 						query={query}
 						queryKey={["series"]}
+						displayType="standard"
 					/>
 				</>
 			)}
@@ -42,6 +44,7 @@ const Bookmarked = () => {
 					queryFunction={fetchBookmarkedContentData}
 					query={query}
 					queryKey={["media"]}
+					displayType="standard"
 				/>
 			)}
 		</>

@@ -21,6 +21,7 @@ const Movies = () => {
 				queryFunction={fetchMoviesContentData}
 				query={query}
 				queryKey={["media"]}
+				displayType="standard"
 			/>
 		</>
 	);

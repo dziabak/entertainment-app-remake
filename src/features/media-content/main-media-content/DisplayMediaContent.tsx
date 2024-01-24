@@ -6,12 +6,15 @@ import MediaContentTile from "./MediaContentTile";
 import MediaContentHeader from "./MediaContentHeader";
 import LoadingSpinner from "../../../components/ui/LoadingSpinner";
 import ErrorBlock from "../../../components/ui/ErrorBlock";
+import TrendingCarousel from "../trending-media-content/TrendingCarousel";
+import MediaGrid from "./MediaGrid";
 
 type DisplayMediaContentProps = {
 	queryFunction: () => Promise<MediaContentData>;
 	title: string;
 	query: string;
 	queryKey: string[];
+	displayType: "trending" | "standard"
 };
 
 const DisplayMediaContent = ({
@@ -19,6 +22,7 @@ const DisplayMediaContent = ({
 	title,
 	query,
 	queryKey,
+	displayType,
 }: DisplayMediaContentProps) => {
 	let content!: JSX.Element | JSX.Element[];
 	let utilityContent!: JSX.Element;
@@ -63,22 +67,19 @@ const DisplayMediaContent = ({
 	}
 
 	return (
-			<div className="my-2 mb-12 space-y-2">
-				<MediaContentHeader
-					filteredData={filteredData!}
-					isSuccess={isSuccess}
-					query={query}
-					title={title}
-				/>
-				<div className="flex items-center justify-center mt-64 lg:mt-96">
-					{utilityContent}
-				</div>
-				{!isFetching && (
-					<div className="grid grid-cols-2 gap-6 md:grid-cols-3 xl:grid-cols-4">
-						{content}
-					</div>
-				)}
+		<div className="my-2 mb-12 space-y-2">
+			<MediaContentHeader
+				filteredData={filteredData!}
+				isSuccess={isSuccess}
+				query={query}
+				title={title}
+			/>
+			<div className="flex items-center justify-center mt-64 lg:mt-96">
+				{utilityContent}
 			</div>
+			{!isFetching && displayType === "standard" && <MediaGrid content={content} />}
+			{!isFetching && displayType === "trending" && <TrendingCarousel content={content} />}
+		</div>
 	);
 };
 

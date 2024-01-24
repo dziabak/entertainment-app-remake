@@ -21,6 +21,7 @@ const Series = () => {
 				queryFunction={fetchSeriesContentData}
 				query={query}
 				queryKey={["media"]}
+				displayType="standard"
 			/>
 		</>
 	);

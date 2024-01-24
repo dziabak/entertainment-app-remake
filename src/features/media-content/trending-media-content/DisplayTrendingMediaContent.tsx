@@ -48,7 +48,7 @@ const DisplayTrendingMediaContent = () => {
 			{/* <div className="grid grid-flow-col gap-4 mt-0 mb-6 overflow-x-auto overscroll-x-contain auto-cols-max snap-x snap-mandatory no-scrollbar">
 				{content}
 			</div> */}
-			<TrendingCarousel>{content}</TrendingCarousel>
+			<TrendingCarousel content={content} />
 		</div>
 	);
 };

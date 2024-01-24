@@ -3,9 +3,9 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 const TrendingCarousel = ({
-	children,
+	content,
 }: {
-	children: JSX.Element | JSX.Element[];
+	content: JSX.Element | JSX.Element[];
 }) => {
 	const responsive = {
 		desktop: {
@@ -43,7 +43,7 @@ const TrendingCarousel = ({
 			removeArrowOnDeviceType={["tablet", "mobile"]}
 			// itemClass="pr-6 h-[140px] md:h-[230px]">
 			itemClass="pr-6 h-full">
-			{children}
+			{content}
 		</Carousel>
 	);
 };

@@ -4,8 +4,8 @@ import { Outlet } from "react-router-dom";
 import { useDocumentTitle } from "usehooks-ts";
 //INTERNAL IMPORTS
 import {
-	fetchAllMediaContentData,
 	fetchTrendingContentData,
+	fetchAllMediaWithoutTrendingContentData
 } from "../services/api/http";
 import DisplayMediaContent from "../features/media-content/display-media-content/DisplayMediaContent";
 
@@ -32,7 +32,7 @@ const Home = () => {
 			)}
 			<DisplayMediaContent
 				title="Recommended for you"
-				queryFunction={fetchAllMediaContentData}
+				queryFunction={fetchAllMediaWithoutTrendingContentData}
 				query={query}
 				queryKey={["media"]}
 				displayType="standard"

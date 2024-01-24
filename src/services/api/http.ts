@@ -23,6 +23,25 @@ export const fetchAllMediaContentData = async () => {
 	return allMediaContentData;
 };
 
+export const fetchAllMediaWithoutTrendingContentData = async () => {
+	// const response = await fetch("../data.json");
+	const response = await fetch(
+		"https://react-databases-6c0bd-default-rtdb.europe-west1.firebasedatabase.app/entertainment-app-remake.json",
+		{ method: "GET", headers: { "Content-Type": "application.json" } }
+	);
+
+	if (!response.ok) {
+		const error = new Error("Data could not be fetched!");
+		throw error;
+	}
+
+	const allMediaContentData: MediaContentData = await response.json();
+
+	const allMediaWithoutTrendingContentData = allMediaContentData.slice(5);
+
+	return allMediaWithoutTrendingContentData;
+};
+
 export const fetchMoviesContentData = async () => {
 	// const response = await fetch("../data.json");
 	const response = await fetch(

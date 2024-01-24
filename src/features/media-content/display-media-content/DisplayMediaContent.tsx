@@ -59,6 +59,7 @@ const DisplayMediaContent = ({
 				isTrending={item.isTrending}
 				rating={item.rating}
 				thumbnail={item.thumbnail}
+				alt={item.alt}
 				title={item.title}
 				year={item.year}
 				mutateQueryKey={queryKey}

@@ -4,6 +4,7 @@ export type MediaContentData = {
 		trending?: { small: string; large: string };
 		regular: { small: string; medium: string; large: string };
 	};
+	alt: string;
 	year: number;
 	category: string;
 	rating: string;
@@ -11,7 +12,7 @@ export type MediaContentData = {
 	isTrending: boolean;
 	description?: string;
 	mutateQueryKey?: string[];
-	displayType?: "trending" | "standard"
+	displayType?: "trending" | "standard";
 }[];
 
 export type MediaContentTileProps = MediaContentData[number];

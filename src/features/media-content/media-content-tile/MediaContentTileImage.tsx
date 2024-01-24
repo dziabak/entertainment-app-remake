@@ -2,12 +2,14 @@ type MediaContentTileImageProps = {
 	thumbnailMobile: string;
 	thumbnailTablet: string;
 	thumbnailDesktop: string;
+	alt: string;
 };
 
 const MediaContentTileImage = ({
 	thumbnailMobile,
 	thumbnailTablet,
 	thumbnailDesktop,
+	alt,
 }: MediaContentTileImageProps) => {
 	return (
 		<picture>
@@ -15,7 +17,7 @@ const MediaContentTileImage = ({
 			<source media="(min-width: 768px)" srcSet={thumbnailTablet} />
 			<img
 				srcSet={thumbnailMobile}
-				alt=""
+				alt={alt}
 				className="rounded-lg object-cover w-full h-full"
 			/>
 		</picture>

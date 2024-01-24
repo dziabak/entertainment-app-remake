@@ -19,6 +19,7 @@ const MediaContentTile = ({
 	isBookmarked,
 	mutateQueryKey,
 	displayType,
+	alt
 }: MediaContentTileProps) => {
 	const linkTo = useLinkTo(title);
 
@@ -36,6 +37,7 @@ const MediaContentTile = ({
 						thumbnailMobile={thumbnail.regular.small}
 						thumbnailTablet={thumbnail.regular.medium}
 						thumbnailDesktop={thumbnail.regular.large}
+						alt={alt}
 					/>
 					<MediaContentTileGradient displayType={displayType} />
 					<MediaContentTilePlayHover />

@@ -38,9 +38,11 @@ const TrendingCarousel = ({
 			autoPlay={true}
 			autoPlaySpeed={5000}
 			transitionDuration={1000}
-			containerClass="carousel-container"
+			// containerClass="carousel-container"
+			// containerClass=""
 			removeArrowOnDeviceType={["tablet", "mobile"]}
-			itemClass="pr-6 h-[140px] md:h-[230px]">
+			// itemClass="pr-6 h-[140px] md:h-[230px]">
+			itemClass="pr-6 h-full">
 			{children}
 		</Carousel>
 	);

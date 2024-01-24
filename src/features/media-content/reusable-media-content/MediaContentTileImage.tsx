@@ -13,7 +13,11 @@ const MediaContentTileImage = ({
 		<picture>
 			<source media="(min-width: 1024px)" srcSet={thumbnailDesktop} />
 			<source media="(min-width: 768px)" srcSet={thumbnailTablet} />
-			<img srcSet={thumbnailMobile} alt="" className="rounded-lg" />
+			<img
+				srcSet={thumbnailMobile}
+				alt=""
+				className="rounded-lg object-cover w-full h-full"
+			/>
 		</picture>
 	);
 };

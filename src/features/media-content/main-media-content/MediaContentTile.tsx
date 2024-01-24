@@ -91,6 +91,24 @@ MediaContentTileProps) => {
 					category={category}
 					rating={rating}
 				/>
+
+				{/* {!isTrending ? (
+					<MediaContentTileLabels
+						title={title}
+						year={year}
+						category={category}
+						rating={rating}
+					/>
+				) : (
+					<div className="absolute left-8 bottom-4">
+						<MediaContentTileLabels
+							title={title}
+							year={year}
+							category={category}
+							rating={rating}
+						/>
+					</div>
+				)} */}
 			</Link>
 			<BookmarkButton
 				isBookmarked={isBookmarked}

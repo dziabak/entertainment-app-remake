@@ -2,8 +2,10 @@
 import { useQuery } from "@tanstack/react-query";
 // INTERNAL IMPORTS
 import { fetchTrendingContentData } from "../../../services/api/http";
-import TrendingMediaContentTile from "./TrendingMediaContentTile";
+// import TrendingMediaContentTile from "./TrendingMediaContentTile";
 import TrendingCarousel from "./TrendingCarousel";
+
+import MediaContentTile from "../main-media-content/MediaContentTile";
 
 const DisplayTrendingMediaContent = () => {
 	let content!: JSX.Element | JSX.Element[];
@@ -23,7 +25,7 @@ const DisplayTrendingMediaContent = () => {
 
 	if (data) {
 		content = data.map((item) => (
-			<TrendingMediaContentTile
+			<MediaContentTile
 				key={item.title}
 				category={item.category}
 				isBookmarked={item.isBookmarked}

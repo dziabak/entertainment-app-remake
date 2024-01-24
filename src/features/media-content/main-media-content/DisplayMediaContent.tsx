@@ -62,6 +62,7 @@ const DisplayMediaContent = ({
 				title={item.title}
 				year={item.year}
 				mutateQueryKey={queryKey}
+				displayType={displayType}
 			/>
 		));
 	}

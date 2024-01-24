@@ -11,6 +11,7 @@ export type MediaContentData = {
 	isTrending: boolean;
 	description?: string;
 	mutateQueryKey?: string[];
+	displayType?: "trending" | "standard"
 }[];
 
 export type MediaContentTileProps = MediaContentData[number];

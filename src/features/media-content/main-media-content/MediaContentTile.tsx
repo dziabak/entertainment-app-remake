@@ -3,13 +3,13 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 // EXTERNAL IMPORTS
 import { useMutation, useQuery } from "@tanstack/react-query";
-//INTERNAL IMPORTS
+// INTERNAL IMPORTS
 import { MediaContentData, MediaContentTileProps } from "../../../types/types";
 import { queryClient } from "../../../services/api/http";
 import { fetchAllMediaContentData } from "../../../services/api/http";
 import { updateBookmark } from "../../../services/api/http";
 import { makeNiceUrl } from "../../../utils/make-nice-url";
-import MediaContentTileLabels from "../reusable-media-content/MediaContentTileLabels";
+import MediaContentTileLabelsRenderer from "../reusable-media-content/MediaContentTileLabelsRenderer";
 import MediaContentTilePlayHover from "../reusable-media-content/MediaContentTilePlayHover";
 import MediaContentTileImage from "../reusable-media-content/MediaContentTileImage";
 import BookmarkButton from "../reusable-media-content/BookmarkButton";
@@ -22,8 +22,8 @@ const MediaContentTile = ({
 	rating,
 	isBookmarked,
 	mutateQueryKey,
-}: // isTrending,
-MediaContentTileProps) => {
+	displayType,
+}: MediaContentTileProps) => {
 	const niceUrl = makeNiceUrl(title);
 	const location = useLocation();
 
@@ -85,30 +85,13 @@ MediaContentTileProps) => {
 					/>
 					<MediaContentTilePlayHover />
 				</div>
-				<MediaContentTileLabels
-					title={title}
-					year={year}
+				<MediaContentTileLabelsRenderer
+					displayType={displayType}
 					category={category}
 					rating={rating}
+					title={title}
+					year={year}
 				/>
-
-				{/* {!isTrending ? (
-					<MediaContentTileLabels
-						title={title}
-						year={year}
-						category={category}
-						rating={rating}
-					/>
-				) : (
-					<div className="absolute left-8 bottom-4">
-						<MediaContentTileLabels
-							title={title}
-							year={year}
-							category={category}
-							rating={rating}
-						/>
-					</div>
-				)} */}
 			</Link>
 			<BookmarkButton
 				isBookmarked={isBookmarked}

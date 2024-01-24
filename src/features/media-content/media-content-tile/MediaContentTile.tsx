@@ -8,6 +8,7 @@ import MediaContentTileLabelsRenderer from "./MediaContentTileLabelsRenderer";
 import MediaContentTilePlayHover from "./MediaContentTilePlayHover";
 import MediaContentTileImage from "./MediaContentTileImage";
 import BookmarkButton from "./BookmarkButton";
+import MediaContentTileGradient from "./MediaContentTileGradient";
 
 const MediaContentTile = ({
 	title,
@@ -26,7 +27,7 @@ const MediaContentTile = ({
 		isBookmarked,
 		mutateQueryKey
 	);
-	
+
 	return (
 		<div className="relative font-thin font-main text-c-light-blue">
 			<Link to={linkTo} className="group">
@@ -36,6 +37,7 @@ const MediaContentTile = ({
 						thumbnailTablet={thumbnail.regular.medium}
 						thumbnailDesktop={thumbnail.regular.large}
 					/>
+					<MediaContentTileGradient displayType={displayType} />
 					<MediaContentTilePlayHover />
 				</div>
 				<MediaContentTileLabelsRenderer

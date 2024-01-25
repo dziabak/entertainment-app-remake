@@ -7,6 +7,10 @@ const useLinkTo = (title: string) => {
 	const location = useLocation();
 	const niceUrl = makeNiceUrl(title);
 
+	if (location.pathname === "/") {
+		return `/home/${niceUrl}`
+	}
+
 	return `${location.pathname}/${niceUrl}`;
 };
 

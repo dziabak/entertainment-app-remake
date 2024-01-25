@@ -27,7 +27,7 @@ const MediaContentDetails = () => {
 		utilityContent = (
 			<ErrorBlock
 				errorHeader="We are sorry :("
-				errorMessage="We could not load your next favourite movie."
+				errorMessage="There was an error while loading the data"
 			/>
 		);
 	}
@@ -44,6 +44,7 @@ const MediaContentDetails = () => {
 				year={item.year}
 				key={item.title}
 				description={item.description}
+				alt={item.alt}
 			/>
 		));
 	}

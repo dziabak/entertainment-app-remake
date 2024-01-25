@@ -41,7 +41,7 @@ const DisplayMediaContent = ({
 		utilityContent = (
 			<ErrorBlock
 				errorHeader="We are sorry :("
-				errorMessage="We could not load your next favourite movie."
+				errorMessage="There was an error while loading the data"
 			/>
 		);
 	}
@@ -76,7 +76,7 @@ const DisplayMediaContent = ({
 				query={query}
 				title={title}
 			/>
-			<div className="flex items-center justify-center mt-64 lg:mt-96">
+			<div className="flex items-center justify-center mt-32 lg:mt-58">
 				{utilityContent}
 			</div>
 			{!isFetching && displayType === "standard" && (

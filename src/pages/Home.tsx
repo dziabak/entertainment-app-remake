@@ -5,12 +5,13 @@ import { useDocumentTitle } from "usehooks-ts";
 //INTERNAL IMPORTS
 import {
 	fetchTrendingContentData,
-	fetchAllMediaWithoutTrendingContentData
+	fetchAllMediaWithoutTrendingContentData,
 } from "../services/api/http";
 import DisplayMediaContent from "../features/media-content/display-media-content/DisplayMediaContent";
-
 import Searchbar from "../features/search/Searchbar";
 import useSearch from "../hooks/useSearch";
+
+
 
 const Home = () => {
 	useDocumentTitle("Home | Entertainment App");
@@ -20,7 +21,6 @@ const Home = () => {
 		<>
 			<Outlet />
 			<Searchbar onSearch={getSearchValue} />
-			{/* {query === "" && <DisplayTrendingMediaContent />} */}
 			{query === "" && (
 				<DisplayMediaContent
 					title="Trending"

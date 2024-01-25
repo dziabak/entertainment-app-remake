@@ -17,6 +17,7 @@ const MediaContentDetailsView = ({
 	rating,
 	year,
 	description,
+	alt,
 }: MediaContentTileProps) => {
 	useDocumentTitle(`${title} | Entertainment App`);
 
@@ -38,6 +39,7 @@ const MediaContentDetailsView = ({
 					thumbnailMobile={thumbnail.regular.small}
 					thumbnailTablet={thumbnail.regular.medium}
 					thumbnailDesktop={thumbnail.regular.large}
+					alt={alt}
 				/>
 			</div>
 			<div className="space-y-4">

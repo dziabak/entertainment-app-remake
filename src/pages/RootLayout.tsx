@@ -11,10 +11,8 @@ const RootLayout = ({ children }: RootLayoutProps) => {
 	return (
 		<main className="min-h-screen bg-c-black">
 			<div className="flex flex-col lg:flex-row">
-				<div>
-					<Navigation />
-				</div>
-				<section className="container px-6 lg:px-32">
+				<Navigation />
+				<section className="container px-6 md:px-0 lg:px-16 lg:pl-24">
 					<Outlet />
 					{children}
 				</section>

@@ -77,7 +77,8 @@ const Navigation = () => {
 				</div>
 				<img
 					src="../../assets/image-avatar.png"
-					alt=""
+					alt="Avatar of the user"
+					// HOVER FUNCTIONALITY DISABLED TO NOT CONFUSE USERS AS THERE IS NO PROFILE SCREEN AT THE MOMENT
 					// className="w-10 transition-colors border-2 rounded-full cursor-pointer hover:border-c-red"
 					className="w-10 border-2 rounded-full"
 				/>

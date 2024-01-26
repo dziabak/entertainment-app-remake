@@ -1,6 +1,6 @@
 // EXTERNAL IMPORTS
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+// import "react-multi-carousel/lib/styles.css";
 
 const TrendingCarousel = ({
 	content,

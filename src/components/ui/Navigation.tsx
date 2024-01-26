@@ -6,7 +6,7 @@ const Navigation = () => {
 		isActive ? "[&_path]:fill-c-white" : "";
 
 	return (
-		<nav className="z-20 md:pt-4 lg:py-4 lg:h-screen lg:fixed">
+		<nav className="z-20 md:pt-4 lg:py-4 lg:h-screen lg:fixed lg:left-0 lg:pl-4 3xl:left-auto 3xl:pl-0">
 			<div className="flex flex-row items-center justify-between p-4 bg-c-dark-blue md:rounded-lg lg:flex-col lg:h-full">
 				<Link to="/home">
 					<svg

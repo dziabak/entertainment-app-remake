@@ -22,6 +22,9 @@ export default {
 					// "2xl": "6rem",
 				},
 			},
+			screens: {
+				"3xl": "1920px",
+			},
 		},
 	},
 	plugins: [],

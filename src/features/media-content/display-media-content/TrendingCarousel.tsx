@@ -8,8 +8,14 @@ const TrendingCarousel = ({
 	content: JSX.Element | JSX.Element[];
 }) => {
 	const responsive = {
+		xl: {
+			breakpoint: { max: 5000, min: 1900 },
+			items: 2,
+			slidesToSlide: 1,
+			partialVisibilityGutter: 200,
+		},
 		desktop: {
-			breakpoint: { max: 5000, min: 1280 },
+			breakpoint: { max: 1900, min: 1280 },
 			items: 2,
 			slidesToSlide: 1,
 			partialVisibilityGutter: 120,

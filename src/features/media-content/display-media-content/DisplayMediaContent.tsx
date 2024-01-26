@@ -79,10 +79,10 @@ const DisplayMediaContent = ({
 			<div className="flex items-center justify-center mt-32 lg:mt-58">
 				{utilityContent}
 			</div>
-			{!isFetching && displayType === "standard" && (
+			{isSuccess && displayType === "standard" && (
 				<MediaGrid content={content} />
 			)}
-			{!isFetching && displayType === "trending" && (
+			{isSuccess && displayType === "trending" && (
 				<TrendingCarousel content={content} />
 			)}
 		</div>

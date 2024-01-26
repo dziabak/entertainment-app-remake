@@ -2,17 +2,21 @@
 import { useDocumentTitle } from "usehooks-ts";
 //INTERNAL IMPORTS
 import { MediaContentTileProps } from "../../types/types";
-import MediaContentTileImage from "../media-content/media-content-tile/MediaContentTileImage";
-import MediaContentTileLabels from "../media-content/media-content-tile/MediaContentTileLabels";
+// import MediaContentTileImage from "../media-content/media-content-tile/MediaContentTileImage";
+// import MediaContentTileLabels from "../media-content/media-content-tile/MediaContentTileLabels";
+
+import { useParams } from "react-router-dom";
 
 import DetailsViewModal from "./DetailsViewModal";
+
+import MediaContentTile from "../media-content/media-content-tile/MediaContentTile";
 
 const MediaContentDetailsView = ({
 	title,
 	thumbnail,
 	category,
-	// isBookmarked,
-	// isTrending,
+	isBookmarked,
+	isTrending,
 	rating,
 	year,
 	description,
@@ -20,28 +24,31 @@ const MediaContentDetailsView = ({
 }: MediaContentTileProps) => {
 	useDocumentTitle(`${title} | Entertainment App`);
 
+	const params = useParams();
+
 	return (
 		<DetailsViewModal>
-			<div>
-				<div>
-					<MediaContentTileImage
-						thumbnailMobile={thumbnail.regular.small}
-						thumbnailTablet={thumbnail.regular.medium}
-						thumbnailDesktop={thumbnail.regular.large}
+			<div className="space-y-4">
+					<MediaContentTile
 						alt={alt}
-					/>
-				</div>
-				<div className="space-y-4">
-					<MediaContentTileLabels
 						category={category}
+						isBookmarked={isBookmarked}
+						isTrending={isTrending}
 						rating={rating}
+						thumbnail={thumbnail}
 						title={title}
+						key={title}
 						year={year}
+						displayType={"standard"}
+						mutateQueryKey={["mediaContentDetails", params.mediaContentId]}
 					/>
-					<p className="font-thin opacity-75 font-main text-c-white max-w-prose">
-						{description}
-					</p>
-				</div>
+				<p className="font-thin opacity-75 font-main text-c-white max-w-prose">
+					{description}
+				</p>
+				<p className="text-xs font-thin opacity-75 font-main text-c-white max-w-prose">
+					NOTE: Since the project does not include a media player, the link to
+					play the media is not functional in this example.
+				</p>
 			</div>
 		</DetailsViewModal>
 	);

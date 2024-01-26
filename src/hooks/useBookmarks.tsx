@@ -10,7 +10,7 @@ import { MediaContentData } from "../types/types";
 const useBookmarks = (
 	title: string,
 	isBookmarked: boolean,
-	mutateQueryKey: string[] | undefined
+	mutateQueryKey: (string | undefined)[] | undefined
 ) => {
 	useQuery({
 		queryKey: ["allMediaContent"],

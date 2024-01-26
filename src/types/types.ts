@@ -11,7 +11,8 @@ export type MediaContentData = {
 	isBookmarked: boolean;
 	isTrending: boolean;
 	description?: string;
-	mutateQueryKey?: string[];
+	// mutateQueryKey?: string[];
+	mutateQueryKey?: (string | undefined)[] | undefined;
 	displayType?: "trending" | "standard";
 }[];
 

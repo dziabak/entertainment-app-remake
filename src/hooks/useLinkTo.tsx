@@ -11,6 +11,10 @@ const useLinkTo = (title: string) => {
 		return `/home/${niceUrl}`
 	}
 
+	if (location.pathname.includes('/') && location.pathname.indexOf('/') !== location.pathname.lastIndexOf('/')) {
+		return `${location.pathname}`;
+	  }
+
 	return `${location.pathname}/${niceUrl}`;
 };
 

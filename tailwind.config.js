@@ -20,6 +20,7 @@ export default {
 					lg: "1rem",
 					// xl: "16rem",
 					// "2xl": "6rem",
+					"3xl": "1rem",
 				},
 			},
 			screens: {

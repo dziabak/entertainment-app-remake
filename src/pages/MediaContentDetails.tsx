@@ -7,6 +7,7 @@ import { fetchMediaContentItem } from "../services/api/http";
 import MediaContentDetailsView from "../features/details-page/MediaContentDetailsView";
 import LoadingSpinner from "../components/ui/LoadingSpinner";
 import ErrorBlock from "../components/ui/ErrorBlock";
+import DetailsViewError from "../features/details-page/DetailsViewError";
 
 const MediaContentDetails = () => {
 	const params = useParams();
@@ -47,6 +48,11 @@ const MediaContentDetails = () => {
 				alt={item.alt}
 			/>
 		));
+
+		if (data.length === 0) {
+			console.log(data.length);
+			content = <DetailsViewError />;
+		}
 	}
 
 	return (

@@ -19,7 +19,7 @@ const Bookmarked = () => {
 	return (
 		<>
 			<Outlet />
-			<Searchbar onSearch={getSearchValue} />
+			<Searchbar onSearch={getSearchValue} placeholderText="Search in your bookmarked movies and TV series"/>
 			{query === "" && (
 				<>
 					<DisplayMediaContent

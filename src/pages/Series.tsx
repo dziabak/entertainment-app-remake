@@ -15,7 +15,7 @@ const Series = () => {
 	return (
 		<>
 			<Outlet />
-			<Searchbar onSearch={getSearchValue} />
+			<Searchbar onSearch={getSearchValue} placeholderText="Search for TV series" />
 			<DisplayMediaContent
 				title="TV Series"
 				queryFunction={fetchSeriesContentData}

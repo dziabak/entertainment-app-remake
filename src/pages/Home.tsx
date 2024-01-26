@@ -20,7 +20,7 @@ const Home = () => {
 	return (
 		<>
 			<Outlet />
-			<Searchbar onSearch={getSearchValue} />
+			<Searchbar onSearch={getSearchValue} placeholderText="Search for movies or TV series" />
 			{query === "" && (
 				<DisplayMediaContent
 					title="Trending"

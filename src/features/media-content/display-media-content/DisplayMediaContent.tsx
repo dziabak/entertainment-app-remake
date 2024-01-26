@@ -1,6 +1,6 @@
 // EXTERNAL IMPORTS
 import { useQuery } from "@tanstack/react-query";
-//INTERNAL IMPORT
+// INTERNAL IMPORTS
 import { MediaContentData } from "../../../types/types";
 import MediaContentTile from "../media-content-tile/MediaContentTile";
 import MediaContentHeader from "./MediaContentHeader";

@@ -15,7 +15,7 @@ const Movies = () => {
 	return (
 		<>
 			<Outlet />
-			<Searchbar onSearch={getSearchValue} />
+			<Searchbar onSearch={getSearchValue} placeholderText="Search for movies" />
 			<DisplayMediaContent
 				title="Movies"
 				queryFunction={fetchMoviesContentData}

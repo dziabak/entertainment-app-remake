@@ -11,8 +11,6 @@ import DisplayMediaContent from "../features/media-content/display-media-content
 import Searchbar from "../features/search/Searchbar";
 import useSearch from "../hooks/useSearch";
 
-
-
 const Home = () => {
 	useDocumentTitle("Home | Entertainment App");
 	const { query, getSearchValue } = useSearch();
@@ -20,7 +18,10 @@ const Home = () => {
 	return (
 		<>
 			<Outlet />
-			<Searchbar onSearch={getSearchValue} placeholderText="Search for movies or TV series" />
+			<Searchbar
+				onSearch={getSearchValue}
+				placeholderText="Search for movies or TV series"
+			/>
 			{query === "" && (
 				<DisplayMediaContent
 					title="Trending"

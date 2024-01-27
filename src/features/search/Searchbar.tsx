@@ -26,16 +26,19 @@ const Searchbar = ({
 
 	return (
 		<div className="flex flex-row items-center p-2 my-6 bg-c-black">
-			{isFetching === 0 ? (
-				<img
-					src="../../assets/icon-search.svg"
-					alt="Icon of a magnifying glass for a search functionality"
-					className="mr-2"
-				/>
-			) : (
-				<SearchbarLoadingSpinner />
-			)}
+			<label htmlFor="search">
+				{isFetching === 0 ? (
+					<img
+						src="../../assets/icon-search.svg"
+						alt="Icon of a magnifying glass for a search functionality"
+						className="mr-2"
+					/>
+				) : (
+					<SearchbarLoadingSpinner />
+				)}
+			</label>
 			<input
+				id="search"
 				value={searchValue}
 				onChange={handleSearchInput}
 				ref={searchInputRef}

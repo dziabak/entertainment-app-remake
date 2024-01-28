@@ -25,7 +25,7 @@ In this project, I successfully created a lightweight Netflix clone that closely
 - **Data fetching and mutation using Firebase:** Data is fetched and mutated using Firebase. All changes to bookmarks' state is saved in Firebase as well.
 - **Dynamic Search Functionality:** Search feature across all pages (including special conditions for bookmarked content) enables seamless discovery of relevant movies and shows.
 - **Effortless Navigation:** Seamless movement between Home, Movies, TV Series, and Bookmarked Shows pages for a user-friendly experience.
-- **Responsive Design:**: Layout adapts gracefully to diverse screen sizes for optimal viewing across devices.
+- **Responsive Design:** Layout adapts gracefully to diverse screen sizes for optimal viewing across devices.
 - **Interactive Elements:** Hover states have been implemented for all interactive elements throughout the site.
 
 ### Links

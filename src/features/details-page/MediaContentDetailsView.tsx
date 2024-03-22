@@ -22,26 +22,28 @@ const MediaContentDetailsView = ({
 	description,
 	alt,
 }: MediaContentTileProps) => {
-	useDocumentTitle(`${title} | Entertainment App`);
+	useDocumentTitle(`${title} | Entertainment App`, {
+		preserveTitleOnUnmount: false,
+	});
 
 	const params = useParams();
 
 	return (
 		<DetailsViewModal>
 			<div className="space-y-4">
-					<MediaContentTile
-						alt={alt}
-						category={category}
-						isBookmarked={isBookmarked}
-						isTrending={isTrending}
-						rating={rating}
-						thumbnail={thumbnail}
-						title={title}
-						key={title}
-						year={year}
-						displayType={"standard"}
-						mutateQueryKey={["mediaContentDetails", params.mediaContentId]}
-					/>
+				<MediaContentTile
+					alt={alt}
+					category={category}
+					isBookmarked={isBookmarked}
+					isTrending={isTrending}
+					rating={rating}
+					thumbnail={thumbnail}
+					title={title}
+					key={title}
+					year={year}
+					displayType={"standard"}
+					mutateQueryKey={["mediaContentDetails", params.mediaContentId]}
+				/>
 				<p className="font-thin opacity-75 font-main text-c-white max-w-prose">
 					{description}
 				</p>

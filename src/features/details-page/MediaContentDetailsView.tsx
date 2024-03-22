@@ -1,5 +1,5 @@
 //EXTERNAL IMPORTS
-import { useDocumentTitle } from "usehooks-ts";
+import { useDocumentTitle, useScrollLock } from "usehooks-ts";
 //INTERNAL IMPORTS
 import { MediaContentTileProps } from "../../types/types";
 // import MediaContentTileImage from "../media-content/media-content-tile/MediaContentTileImage";
@@ -25,6 +25,8 @@ const MediaContentDetailsView = ({
 	useDocumentTitle(`${title} | Entertainment App`, {
 		preserveTitleOnUnmount: false,
 	});
+
+	useScrollLock();
 
 	const params = useParams();
 

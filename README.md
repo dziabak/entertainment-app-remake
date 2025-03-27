@@ -27,7 +27,7 @@ In this project, I successfully created a lightweight Netflix clone that closely
 - **Effortless Navigation:** Seamless movement between Home, Movies, TV Series, and Bookmarked Shows pages for a user-friendly experience.
 - **Responsive Design:** Layout adapts gracefully to diverse screen sizes for optimal viewing across devices.
 - **Interactive Elements:** Hover states have been implemented for all interactive elements throughout the site.
-- - **E2E automated testing**: Test suites designed and programmed in Playwright to test core features.
+- **E2E automated testing**: Test suites designed and programmed in Playwright to test core features.
 
 ### Links
 
@@ -51,7 +51,7 @@ In this project, I successfully created a lightweight Netflix clone that closely
 
 - **Custom Hooks for Efficiency:** Embracing custom hooks streamlined my project. Utilizing them for search functionality and complex logic organization simplified component structures. This separation of concerns enhanced code clarity, maintainability, and scalability. Comfort with custom hooks empowered modular development and efficient code reuse.
 
-- **E2E automated testing in Playwirght**: This project allowed me to design, write and implement robust testing suites to verify core features of the application, including navigation, displaying data, searching functionality and simulating sending requests with new data (bookmarking).
+- **E2E automated testing in Playwright**: This project allowed me to design, write and implement robust testing suites to verify core features of the application, including navigation, displaying data, searching functionality and simulating sending requests with new data (bookmarking).
 
 ### Continued development
 

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import useBookmarks from "../../../hooks/useBookmarks";
 import useLinkTo from "../../../hooks/useLinkTo";
 import { MediaContentTileProps } from "../../../types/types";
+import { slugifyString } from "../../../utils/slugify-string";
 import MediaContentTileLabelsRenderer from "./MediaContentTileLabelsRenderer";
 import MediaContentTilePlayHover from "./MediaContentTilePlayHover";
 import MediaContentTileImage from "./MediaContentTileImage";
@@ -19,7 +20,7 @@ const MediaContentTile = ({
 	isBookmarked,
 	mutateQueryKey,
 	displayType,
-	alt
+	alt,
 }: MediaContentTileProps) => {
 	const linkTo = useLinkTo(title);
 
@@ -29,8 +30,12 @@ const MediaContentTile = ({
 		mutateQueryKey
 	);
 
+	const slugifiedTitle = slugifyString(title);
+
 	return (
-		<div className="relative font-thin font-main text-c-light-blue">
+		<div
+			className="relative font-thin font-main text-c-light-blue"
+			data-testid={`${slugifiedTitle}-media-tile`}>
 			<Link to={linkTo} className="group">
 				<div className="relative">
 					<MediaContentTileImage

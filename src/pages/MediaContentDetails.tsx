@@ -57,7 +57,9 @@ const MediaContentDetails = () => {
 
 	return (
 		<section className="fixed top-0 left-0 z-10 w-full h-full cursor-pointer bg-c-dark-blue/50">
-			<div className="flex items-center justify-center w-full h-full">
+			<div
+				data-testid="media-item-page-backdrop"
+				className="flex items-center justify-center w-full h-full">
 				{utilityContent}
 				{content}
 			</div>

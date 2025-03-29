@@ -38,6 +38,7 @@ const Searchbar = ({
 				)}
 			</label>
 			<input
+				data-testid="searchbar"
 				id="search"
 				value={searchValue}
 				onChange={handleSearchInput}

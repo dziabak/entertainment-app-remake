@@ -8,7 +8,7 @@ const Navigation = () => {
 	return (
 		<nav className="z-20 md:pt-4 lg:py-4 lg:h-screen lg:fixed lg:left-0 lg:pl-4 3xl:left-auto 3xl:pl-0">
 			<div className="flex flex-row items-center justify-between p-4 bg-c-dark-blue md:rounded-lg lg:flex-col lg:h-full">
-				<Link to="/home">
+				<Link to="/home" data-testid="navigation-logo-btn">
 					<svg
 						width="33"
 						height="27"
@@ -22,7 +22,7 @@ const Navigation = () => {
 					</svg>
 				</Link>
 				<div className="flex flex-row space-x-4 lg:flex-col lg:space-x-0 lg:space-y-8 lg:h-full lg:mt-16">
-					<NavLink to="/home" className={activeClass}>
+					<NavLink to="/home" className={activeClass} data-testid="navigation-home-btn">
 						<svg
 							width="20"
 							height="20"
@@ -35,7 +35,7 @@ const Navigation = () => {
 							/>
 						</svg>
 					</NavLink>
-					<NavLink to="/movies" className={activeClass}>
+					<NavLink to="/movies" className={activeClass} data-testid="navigation-movies-btn">
 						<svg
 							width="20"
 							height="20"
@@ -48,7 +48,7 @@ const Navigation = () => {
 							/>
 						</svg>
 					</NavLink>
-					<NavLink to="/series" className={activeClass}>
+					<NavLink to="/series" className={activeClass} data-testid="navigation-series-btn">
 						<svg
 							width="20"
 							height="20"
@@ -61,7 +61,7 @@ const Navigation = () => {
 							/>
 						</svg>
 					</NavLink>
-					<NavLink to="/bookmarked" className={activeClass}>
+					<NavLink to="/bookmarked" className={activeClass} data-testid="navigation-bookmarked-btn">
 						<svg
 							width="17"
 							height="20"
